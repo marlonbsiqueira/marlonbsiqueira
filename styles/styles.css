@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif, Arial, Helvetica, sans-serif;
+    background-color: #EAF2F8;
+    color: #1F3A5F;
+}
+
+section {
+    padding: 100px 8%;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #2407de;
+    margin-top: 10px;
+}
+
+.section-description {
+    max-width: 700px;
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+
+/* Buttons */
+
+.btn-default {
+    border: none;
+    background: linear-gradient(135deg, #2407de, #1F3A5F);
+    border-radius: 30px;
+    padding: 12px 26px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-default:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Reveal animation */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 0.9s ease;
+}
+
+.reveal.left {
+    transform: translateX(-80px);
+}
+
+.reveal.right {
+    transform: translateX(80px);
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translate(0,0);
+}
+
+/* Alternating layout */
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    margin-bottom: 100px;
+}
+
+.row.reverse {
+    flex-direction: row-reverse;
+}
+
+.row img {
+    width: 75%;
+    border-radius: 14px;
+}
+
+.row .text {
+    width: 45%;
+}
+
+.row .text h3 {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.row .text p {
+    line-height: 1.6;
+}
+
+/* Centered images */
+
+.center-image {
+    display: block;
+    margin: 0 auto 80px auto;
+    width: 60%;
+    border-radius: 14px;
+}
+
+/* Smaller sections */
+
+.small-image {
+    width: 60%;
+    display: block;
+    margin: 0 auto 40px auto;
+}
+
+/* Background alternation */
+
+#finance,
+#continuousimprovement {
+    background-color: #ffffff;
+}
+
+/* Contact */
+
+.contact {
+    text-align: center;
+}
+
+.contact form {
+    max-width: 500px;
+    margin: 50px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+@media(max-width: 992px){
+    .row,
+    .row.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .row img,
+    .row .text {
+        width: 100%;
+    }
+
+    .center-image,
+    .small-image {
+        width: 80%;
+    }
+}
+
+@media (max-width: 600px) {
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .section-description {
+        font-size: 0.9rem;
+    }
+}
