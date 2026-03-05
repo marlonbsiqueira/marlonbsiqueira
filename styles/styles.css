@@ -36,7 +36,6 @@ section {
     font-weight: 600;
 }
 
-/* Traço abaixo do título */
 .section-title::after {
     content: "";
     display: block;
@@ -131,22 +130,19 @@ section {
 }
 
 /* ============================= */
-/* 🔥 CENTRALIZAÇÃO CORRETA */
-/* APENAS TEXTO de Automation e Continuous */
+/* AUTOMATION & CONTINUOUS FIX */
 /* ============================= */
 
-/* NÃO mexe no título */
-/* NÃO mexe na row */
-/* Apenas no texto interno */
-
-#automation .text p,
-#continuousimprovement .text p {
-    text-align: center;
+/* Mantém título à esquerda */
+#automation .section-title,
+#continuousimprovement .section-title {
+    text-align: left;
 }
 
-/* Se houver .section-description nessas seções */
+/* Centraliza apenas o texto e remove qualquer limitação */
 #automation .section-description,
 #continuousimprovement .section-description {
+    max-width: 100%;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -183,12 +179,12 @@ section {
 /* ============================= */
 
 .contact {
-    text-align: left; /* mantém título alinhado à esquerda */
+    text-align: center;
 }
 
-/* Corrige o traço ficar alinhado com o texto */
 .contact .section-title::after {
-    margin-left: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .contact form {
@@ -243,41 +239,4 @@ section {
     .section-description {
         font-size: 0.95rem;
     }
-}
-
-/* ===================================== */
-/* FIX REAL – Automation & Continuous   */
-/* ===================================== */
-
-/* Remove limitação lateral apenas nessas duas seções */
-#automation .row .text,
-#continuousimprovement .row .text {
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-/* Centraliza apenas o texto */
-#automation .row .text p,
-#continuousimprovement .row .text p {
-    text-align: center;
-}
-
-/* Mantém o título à esquerda */
-#automation .section-title,
-#continuousimprovement .section-title {
-    text-align: left;
-}
-/* ===================================== */
-/* FIX DEFINITIVO – Automation & CI     */
-/* ===================================== */
-
-#automation .section-description,
-#continuousimprovement .section-description {
-    max-width: 100%;
-    width: 100%;
-    text-align: center;
-    overflow: visible;
-    white-space: normal;
-    text-overflow: unset;
 }
