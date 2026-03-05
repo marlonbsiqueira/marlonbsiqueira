@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ============================= */
+/* GLOBAL RESET */
+/* ============================= */
 
 * {
     margin: 0;
@@ -14,52 +18,67 @@ body {
     font-family: 'Poppins', sans-serif, Arial, Helvetica, sans-serif;
     background-color: #EAF2F8;
     color: #1F3A5F;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
 }
 
+/* ============================= */
+/* SECTION BASE */
+/* ============================= */
+
 section {
-    padding: 100px 8%;
+    padding: 110px 8%;
 }
 
 .section-title {
-    font-size: 2rem;
-    margin-bottom: 40px;
+    font-size: 2.2rem;
+    margin-bottom: 50px;
     position: relative;
+    font-weight: 700;
 }
 
 .section-title::after {
     content: "";
     display: block;
-    width: 60px;
+    width: 70px;
     height: 4px;
-    background: #2407de;
-    margin-top: 10px;
+    background: linear-gradient(135deg, #2407de, #1F3A5F);
+    margin-top: 12px;
+    border-radius: 2px;
 }
 
 .section-description {
-    max-width: 700px;
-    line-height: 1.7;
+    max-width: 800px;
+    line-height: 1.8;
     margin-bottom: 40px;
+    font-size: 1rem;
 }
 
-/* Buttons */
+/* ============================= */
+/* BUTTONS */
+/* ============================= */
 
 .btn-default {
     border: none;
     background: linear-gradient(135deg, #2407de, #1F3A5F);
     border-radius: 30px;
-    padding: 12px 26px;
+    padding: 13px 28px;
     font-weight: 600;
     color: #fff;
     cursor: pointer;
     transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .btn-default:hover {
     transform: translateY(-4px);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 18px 28px rgba(0, 0, 0, 0.15);
 }
 
-/* Reveal animation */
+/* ============================= */
+/* REVEAL ANIMATION */
+/* ============================= */
 
 .reveal {
     opacity: 0;
@@ -77,17 +96,19 @@ section {
 
 .reveal.show {
     opacity: 1;
-    transform: translate(0,0);
+    transform: translate(0, 0);
 }
 
-/* Alternating layout */
+/* ============================= */
+/* ROW LAYOUT */
+/* ============================= */
 
 .row {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 60px;
-    margin-bottom: 100px;
+    margin-bottom: 120px;
 }
 
 .row.reverse {
@@ -96,7 +117,13 @@ section {
 
 .row img {
     width: 75%;
-    border-radius: 14px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    transition: transform 0.4s ease;
+}
+
+.row img:hover {
+    transform: scale(1.03);
 }
 
 .row .text {
@@ -104,60 +131,120 @@ section {
 }
 
 .row .text h3 {
-    margin-bottom: 15px;
-    font-size: 1.4rem;
+    margin-bottom: 18px;
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 .row .text p {
-    line-height: 1.6;
+    line-height: 1.7;
+    font-size: 0.98rem;
 }
 
-/* Centered images */
+/* ============================= */
+/* CENTERED IMAGES */
+/* ============================= */
 
 .center-image {
     display: block;
-    margin: 0 auto 80px auto;
+    margin: 0 auto 100px auto;
     width: 60%;
-    border-radius: 14px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
 }
-
-/* Smaller sections */
 
 .small-image {
-    width: 60%;
+    width: 55%;
     display: block;
-    margin: 0 auto 40px auto;
+    margin: 0 auto 50px auto;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
 }
 
-/* Background alternation */
+/* ============================= */
+/* BACKGROUND ALTERNATION */
+/* ============================= */
 
 #finance,
 #continuousimprovement {
     background-color: #ffffff;
 }
 
-/* Contact */
+/* ============================= */
+/* AUTOMATION & CI CENTRALIZATION */
+/* ============================= */
+
+#automation,
+#continuousimprovement {
+    text-align: center;
+}
+
+#automation .section-description,
+#continuousimprovement .section-description {
+    margin: 40px auto 0 auto;
+    max-width: 900px;
+    text-align: center;
+    line-height: 1.9;
+}
+
+/* ============================= */
+/* CONTACT */
+/* ============================= */
 
 .contact {
     text-align: center;
 }
 
 .contact form {
-    max-width: 500px;
+    max-width: 550px;
     margin: 50px auto 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 18px;
 }
 
 .contact input,
 .contact textarea {
-    padding: 12px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid #d6d6d6;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
 }
 
+.contact input:focus,
+.contact textarea:focus {
+    outline: none;
+    border-color: #2407de;
+    box-shadow: 0 0 0 3px rgba(36,7,222,0.1);
+}
+
+/* SOCIAL CONTACT */
+
+.contact-social {
+    margin-top: 45px;
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+}
+
+.contact-social a {
+    font-size: 22px;
+    color: #1F3A5F;
+    transition: 0.3s ease;
+}
+
+.contact-social a:hover {
+    color: #2407de;
+    transform: translateY(-5px);
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
 @media(max-width: 992px){
+
     .row,
     .row.reverse {
         flex-direction: column;
@@ -173,14 +260,32 @@ section {
     .small-image {
         width: 80%;
     }
+
+    .section-title {
+        text-align: center;
+    }
+
+    .section-title::after {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 @media (max-width: 600px) {
+
+    section {
+        padding: 80px 6%;
+    }
+
     .section-title {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
 
     .section-description {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
+    }
+
+    .row {
+        margin-bottom: 80px;
     }
 }
