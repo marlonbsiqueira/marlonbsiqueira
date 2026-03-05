@@ -1,39 +1,43 @@
 # 👩🏻‍💻 Marlon B Siqueira
 
-**`Desenvolvedora FullStack`**
+**`Senior Finance Transformation Specialist`**
 
-Me chamo Larissa Vitória Kich, tenho 20 anos e sou natural do Rio Grande do Sul. Concluí o ensino médio no IFRS, com o curso técnico em informática. Atualmente, estou cursando Análise e Desenvolvimento de Sistemas na PUCRS. Sou apaixonada por tecnologia e compartilho meu conhecimento através do meu canal no YouTube "[Larissa Kich](https://www.youtube.com/@larissakich)", onde ensino a criar projetos web, e também através do Instagram, com o perfil chamado "[Dev em Dev](https://www.instagram.com/dev_em_dev/)".
+🎯 I transform complex finance operations into strategic business accelerators.
 
-<p align="left">
-    <a href="https://www.youtube.com/@larissakich?sub_confirmation=1">
-        <img 
-            alt="youtube subscribers" 
-            title="Inscreva-se no meu canal" 
-            src="https://custom-icon-badges.demolab.com/youtube/channel/subscribers/UCo-gJ8RnTn5akHqHvO55DVA?color=%23E05D44&label=Inscreva-se&logo=video&logoColor=white&style=for-the-badge&labelColor=CE4630"
-        />
-    </a>
-    <a href="https://www.youtube.com/@larissakich">
-        <img 
-            alt="youtube views" 
-            title="Vizualizações no YouTube" 
-            src="https://custom-icon-badges.demolab.com/youtube/channel/views/UCo-gJ8RnTn5akHqHvO55DVA?color=%23E1AD0E&logo=eye&logoColor=white&style=for-the-badge&labelColor=C79600"
-        />
-    </a> 
-    <a href="https://github.com/Larissakich?tab=repositories&sort=stargazers">
-        <img 
-            alt="Total de estrelas" 
-            title="Total de estrelas GitHub" 
-            src="https://custom-icon-badges.demolab.com/github/stars/Larissakich?color=55960c&style=for-the-badge&labelColor=488207&logo=star&label=estrelas"
-        />
-    </a>
-    <a href="https://github.com/Larissakich?tab=followers">
-        <img 
-            alt="Seguidores" 
-            title="Me siga no GitHub" 
-            src="https://custom-icon-badges.demolab.com/github/followers/Larissakich?color=236ad3&labelColor=1155ba&style=for-the-badge&logo=github&label=Seguidores&logoColor=white"
-        />
-    </a>
-</p>
+With 12+ years leading finance transformation across Europe and Latin America, I specialize in modernizing end-to-end financial operations through SAP S/4HANA implementation, intelligent automation, and advanced analytics—delivering measurable results:
+
+✓ 35-50% reduction in manual finance workload through RPA and Power Platform automation
+✓ €200K+ annual productivity savings via process optimization and standardization
+✓ 25% faster monthly reporting cycles through Power BI intelligence and real-time analytics
+✓ 40-50% improvement in KPI visibility enabling data-driven executive decision-making
+
+MY TRANSFORMATION EXPERTISE
+
+Finance Operations & Shared Services
+Currently leading SAP S/4HANA transformation across 15+ European entities at Stellantis Shared Services Center. Expert in Record to Report (R2R), Procure to Pay (P2P), Order to Cash (OTC), and financial controls across complex, multinational environments managing 30+ jurisdictions.
+Intelligent Automation & Technology
+Hands-on architect of 20+ automation solutions: 12 RPA workflows (Automation Anywhere, Blue Prism), 8 Power Platform applications, and multiple VBA/Python tools. I don't just oversee automation—I design and build it.
+
+Data & Analytics Intelligence
+Built 15+ Power BI executive dashboards using advanced DAX and data modeling, transforming raw financial data into real-time strategic insights that accelerate C-level decision-making.
+
+Process Excellence & Continuous Improvement
+Lean Six Sigma Black Belt eliminating process bottlenecks through structured DMAIC methodology. Track record of 10-20% cycle time reductions and 15% accuracy improvements across finance operations.
+
+Leadership & Capability Building
+Developed 20+ finance professionals through technical training programs (SAP, RPA, Power BI, VBA). Strong cross-functional leader bridging Finance, IT, and Business stakeholders across 5+ countries.
+
+TECHNICAL STACK
+
+SAP S/4HANA | RPA (Automation Anywhere, Blue Prism) | Microsoft Power Platform | Power BI & DAX | VBA | Python | SQL | Lean Six Sigma | Financial Controls | SOX Compliance | IFRS
+
+BACKGROUND
+🎓 Postgraduate in Finance & Taxation | Porto Business School
+🌍 Dual citizenship (Brazilian & Italian) - EU citizen with unrestricted right to work across Europe
+🇮🇪 Valid PPS number for Ireland (previous experience in Dublin)
+💬 Portuguese (Native) | English (C1 Advanced)
+
+
 
 ---
 
