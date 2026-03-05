@@ -244,3 +244,27 @@ section {
         font-size: 0.95rem;
     }
 }
+
+/* ===================================== */
+/* FIX REAL – Automation & Continuous   */
+/* ===================================== */
+
+/* Remove limitação lateral apenas nessas duas seções */
+#automation .row .text,
+#continuousimprovement .row .text {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Centraliza apenas o texto */
+#automation .row .text p,
+#continuousimprovement .row .text p {
+    text-align: center;
+}
+
+/* Mantém o título à esquerda */
+#automation .section-title,
+#continuousimprovement .section-title {
+    text-align: left;
+}
