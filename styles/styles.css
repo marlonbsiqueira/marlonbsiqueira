@@ -268,3 +268,16 @@ section {
 #continuousimprovement .section-title {
     text-align: left;
 }
+/* ===================================== */
+/* FIX DEFINITIVO – Automation & CI     */
+/* ===================================== */
+
+#automation .section-description,
+#continuousimprovement .section-description {
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+    overflow: visible;
+    white-space: normal;
+    text-overflow: unset;
+}
