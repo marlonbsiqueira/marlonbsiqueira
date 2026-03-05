@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 /* ============================= */
-/* GLOBAL RESET */
+/* RESET */
 /* ============================= */
 
 * {
@@ -19,7 +19,6 @@ body {
     background-color: #EAF2F8;
     color: #1F3A5F;
     line-height: 1.7;
-    -webkit-font-smoothing: antialiased;
 }
 
 /* ============================= */
@@ -48,8 +47,8 @@ section {
 }
 
 .section-description {
-    max-width: 800px;
-    line-height: 1.8;
+    max-width: 900px;
+    line-height: 1.9;
     margin-bottom: 40px;
     font-size: 1rem;
 }
@@ -77,7 +76,7 @@ section {
 }
 
 /* ============================= */
-/* REVEAL ANIMATION */
+/* REVEAL */
 /* ============================= */
 
 .reveal {
@@ -138,7 +137,39 @@ section {
 
 .row .text p {
     line-height: 1.7;
-    font-size: 0.98rem;
+    font-size: 1rem;
+}
+
+/* ============================= */
+/* 🔥 CORREÇÃO DEFINITIVA */
+/* AUTOMATION & CONTINUOUS */
+/* ============================= */
+
+/* Remove layout lateral dessas duas seções */
+
+#automation .row,
+#continuousimprovement .row {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+}
+
+/* Faz o texto ocupar largura total */
+
+#automation .row .text,
+#continuousimprovement .row .text {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Ajusta imagem central */
+
+#automation .row img,
+#continuousimprovement .row img {
+    width: 65%;
+    margin: 0 auto;
 }
 
 /* ============================= */
@@ -162,29 +193,12 @@ section {
 }
 
 /* ============================= */
-/* BACKGROUND ALTERNATION */
+/* BACKGROUND */
 /* ============================= */
 
 #finance,
 #continuousimprovement {
     background-color: #ffffff;
-}
-
-/* ============================= */
-/* AUTOMATION & CI CENTRALIZATION */
-/* ============================= */
-
-#automation,
-#continuousimprovement {
-    text-align: center;
-}
-
-#automation .section-description,
-#continuousimprovement .section-description {
-    margin: 40px auto 0 auto;
-    max-width: 900px;
-    text-align: center;
-    line-height: 1.9;
 }
 
 /* ============================= */
@@ -219,26 +233,6 @@ section {
     box-shadow: 0 0 0 3px rgba(36,7,222,0.1);
 }
 
-/* SOCIAL CONTACT */
-
-.contact-social {
-    margin-top: 45px;
-    display: flex;
-    justify-content: center;
-    gap: 28px;
-}
-
-.contact-social a {
-    font-size: 22px;
-    color: #1F3A5F;
-    transition: 0.3s ease;
-}
-
-.contact-social a:hover {
-    color: #2407de;
-    transform: translateY(-5px);
-}
-
 /* ============================= */
 /* RESPONSIVE */
 /* ============================= */
@@ -254,11 +248,6 @@ section {
     .row img,
     .row .text {
         width: 100%;
-    }
-
-    .center-image,
-    .small-image {
-        width: 80%;
     }
 
     .section-title {
