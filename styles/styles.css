@@ -22,57 +22,55 @@ body {
 }
 
 /* ============================= */
-/* SECTION BASE */
+/* SECTIONS */
 /* ============================= */
 
 section {
-    padding: 110px 8%;
+    padding: 100px 8%;
 }
 
 .section-title {
-    font-size: 2.2rem;
-    margin-bottom: 50px;
+    font-size: 2rem;
+    margin-bottom: 40px;
     position: relative;
-    font-weight: 700;
+    font-weight: 600;
 }
 
+/* Traço abaixo do título */
 .section-title::after {
     content: "";
     display: block;
-    width: 70px;
+    width: 60px;
     height: 4px;
-    background: linear-gradient(135deg, #2407de, #1F3A5F);
-    margin-top: 12px;
-    border-radius: 2px;
+    background: #2407de;
+    margin-top: 10px;
 }
 
+/* Descrição padrão */
 .section-description {
-    max-width: 900px;
-    line-height: 1.9;
+    max-width: 700px;
+    line-height: 1.8;
     margin-bottom: 40px;
-    font-size: 1rem;
 }
 
 /* ============================= */
-/* BUTTONS */
+/* BOTÕES */
 /* ============================= */
 
 .btn-default {
     border: none;
     background: linear-gradient(135deg, #2407de, #1F3A5F);
     border-radius: 30px;
-    padding: 13px 28px;
+    padding: 12px 26px;
     font-weight: 600;
     color: #fff;
     cursor: pointer;
     transition: all 0.3s ease;
-    text-decoration: none;
-    display: inline-block;
 }
 
 .btn-default:hover {
     transform: translateY(-4px);
-    box-shadow: 0 18px 28px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
 }
 
 /* ============================= */
@@ -95,11 +93,11 @@ section {
 
 .reveal.show {
     opacity: 1;
-    transform: translate(0, 0);
+    transform: translate(0,0);
 }
 
 /* ============================= */
-/* ROW LAYOUT */
+/* LAYOUT ROW */
 /* ============================= */
 
 .row {
@@ -107,7 +105,7 @@ section {
     align-items: center;
     justify-content: space-between;
     gap: 60px;
-    margin-bottom: 120px;
+    margin-bottom: 100px;
 }
 
 .row.reverse {
@@ -116,13 +114,7 @@ section {
 
 .row img {
     width: 75%;
-    border-radius: 16px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-    transition: transform 0.4s ease;
-}
-
-.row img:hover {
-    transform: scale(1.03);
+    border-radius: 14px;
 }
 
 .row .text {
@@ -130,70 +122,55 @@ section {
 }
 
 .row .text h3 {
-    margin-bottom: 18px;
-    font-size: 1.5rem;
-    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
 }
 
 .row .text p {
     line-height: 1.7;
-    font-size: 1rem;
 }
 
 /* ============================= */
-/* 🔥 CORREÇÃO DEFINITIVA */
-/* AUTOMATION & CONTINUOUS */
+/* 🔥 CENTRALIZAÇÃO CORRETA */
+/* APENAS TEXTO de Automation e Continuous */
 /* ============================= */
 
-/* Remove layout lateral dessas duas seções */
+/* NÃO mexe no título */
+/* NÃO mexe na row */
+/* Apenas no texto interno */
 
-#automation .row,
-#continuousimprovement .row {
-    flex-direction: column;
-    text-align: center;
-    gap: 40px;
-}
-
-/* Faz o texto ocupar largura total */
-
-#automation .row .text,
-#continuousimprovement .row .text {
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
+#automation .text p,
+#continuousimprovement .text p {
     text-align: center;
 }
 
-/* Ajusta imagem central */
-
-#automation .row img,
-#continuousimprovement .row img {
-    width: 65%;
-    margin: 0 auto;
+/* Se houver .section-description nessas seções */
+#automation .section-description,
+#continuousimprovement .section-description {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* ============================= */
-/* CENTERED IMAGES */
+/* IMAGENS CENTRALIZADAS */
 /* ============================= */
 
 .center-image {
     display: block;
-    margin: 0 auto 100px auto;
+    margin: 0 auto 80px auto;
     width: 60%;
-    border-radius: 16px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    border-radius: 14px;
 }
 
 .small-image {
-    width: 55%;
+    width: 60%;
     display: block;
-    margin: 0 auto 50px auto;
-    border-radius: 16px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    margin: 0 auto 40px auto;
 }
 
 /* ============================= */
-/* BACKGROUND */
+/* FUNDO ALTERNADO */
 /* ============================= */
 
 #finance,
@@ -206,39 +183,41 @@ section {
 /* ============================= */
 
 .contact {
-    text-align: center;
+    text-align: left; /* mantém título alinhado à esquerda */
+}
+
+/* Corrige o traço ficar alinhado com o texto */
+.contact .section-title::after {
+    margin-left: 0;
 }
 
 .contact form {
-    max-width: 550px;
+    max-width: 500px;
     margin: 50px auto 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 15px;
 }
 
 .contact input,
 .contact textarea {
-    padding: 14px;
-    border-radius: 10px;
-    border: 1px solid #d6d6d6;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
     font-family: 'Poppins', sans-serif;
-    transition: all 0.3s ease;
 }
 
 .contact input:focus,
 .contact textarea:focus {
     outline: none;
     border-color: #2407de;
-    box-shadow: 0 0 0 3px rgba(36,7,222,0.1);
 }
 
 /* ============================= */
-/* RESPONSIVE */
+/* RESPONSIVO */
 /* ============================= */
 
 @media(max-width: 992px){
-
     .row,
     .row.reverse {
         flex-direction: column;
@@ -250,31 +229,18 @@ section {
         width: 100%;
     }
 
-    .section-title {
-        text-align: center;
-    }
-
-    .section-title::after {
-        margin-left: auto;
-        margin-right: auto;
+    .center-image,
+    .small-image {
+        width: 80%;
     }
 }
 
 @media (max-width: 600px) {
-
-    section {
-        padding: 80px 6%;
-    }
-
     .section-title {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
 
     .section-description {
         font-size: 0.95rem;
-    }
-
-    .row {
-        margin-bottom: 80px;
     }
 }
