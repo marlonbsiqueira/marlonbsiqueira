@@ -269,3 +269,37 @@ section {
     color: white;
     background: linear-gradient(135deg,#2407de,#1F3A5F);
 }
+
+/* ============================= */
+/* SOCIAL ICONS – FINAL FIX */
+/* ============================= */
+
+.social-media-buttons,
+.contact-social {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.social-media-buttons a,
+.contact-social a {
+    font-size: 24px;
+    color: #1F3A5F;
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+    transition: all 0.3s ease;
+}
+
+.social-media-buttons a:hover,
+.contact-social a:hover {
+    transform: translateY(-4px);
+    color: white;
+    background: linear-gradient(135deg,#2407de,#1F3A5F);
+}
