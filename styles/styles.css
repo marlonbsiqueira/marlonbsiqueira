@@ -369,3 +369,82 @@ margin-right:20px;
 font-size:0.95rem;
 }
 
+/* ============================= */
+/* TECHNICAL SKILLS */
+/* ============================= */
+
+.skills-container{
+display:flex;
+gap:40px;
+justify-content:space-between;
+flex-wrap:wrap;
+}
+
+.skill-box{
+flex:1;
+min-width:250px;
+}
+
+.skill-box h3{
+margin-bottom:20px;
+font-size:1.2rem;
+}
+
+/* Programming Languages */
+
+.skills-icons{
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+
+.skill-item{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.skill-item img{
+width:26px;
+height:26px;
+}
+
+.skill-item span{
+font-size:0.95rem;
+}
+
+/* Technologies + Certifications */
+
+.skills-list{
+list-style:none;
+padding-left:0;
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.skills-list li{
+position:relative;
+padding-left:22px;
+font-size:0.95rem;
+}
+
+/* Bullet Technology */
+
+.skills-list.tech li::before{
+content:"⚙";
+position:absolute;
+left:0;
+color:#2407de;
+font-size:14px;
+}
+
+/* Bullet Certification */
+
+.skills-list.cert li::before{
+content:"✔";
+position:absolute;
+left:0;
+color:#2407de;
+font-size:14px;
+}
