@@ -351,3 +351,21 @@ flex-direction:column;
 
 }
 
+.skills-icons{
+display:flex;
+flex-wrap:wrap;
+align-items:center;
+gap:10px;
+margin-top:10px;
+}
+
+.skills-icons img{
+width:28px;
+height:28px;
+}
+
+.skills-icons span{
+margin-right:20px;
+font-size:0.95rem;
+}
+
