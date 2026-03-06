@@ -58,8 +58,22 @@ Background: Postgraduate in Finance & Taxation (Porto Business School) · Dual B
     width="30px"
     style="padding-right: 10px;"
     src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+<img 
+    allign="left"
+    alt="CSS"
+    tittle="CSS"
+    width="30px"
+    style="padding-right: 10px;"
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" />
+<img 
+    allign="left"
+    alt="CSS"
+    tittle="CSS"
+    width="30px"
+    style="padding-right: 10px;"
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" />
           
-
+          
 
 ---
 
