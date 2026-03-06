@@ -303,3 +303,51 @@ section {
     color: white;
     background: linear-gradient(135deg,#2407de,#1F3A5F);
 }
+
+/* ============================= */
+/* TECHNICAL SKILLS */
+/* ============================= */
+
+#technicalskills {
+    background: #ffffff;
+}
+
+.skills-container{
+    display:flex;
+    justify-content:space-between;
+    gap:40px;
+    margin-top:40px;
+}
+
+.skill-box{
+    flex:1;
+    background:#EAF2F8;
+    padding:30px;
+    border-radius:14px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:all 0.3s ease;
+}
+
+.skill-box:hover{
+    transform:translateY(-6px);
+}
+
+.skill-box h3{
+    margin-bottom:15px;
+    font-size:1.3rem;
+}
+
+.skill-box p{
+    line-height:1.6;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.skills-container{
+flex-direction:column;
+}
+
+}
+
