@@ -400,13 +400,14 @@ gap:12px;
 
 .skill-item{
 display:flex;
-align-items:left;
+align-items:center;
 gap:12px;
 }
 
 .skill-item img{
 width:26px;
 height:26px;
+padding-left:0;
 }
 
 .skill-item span{
