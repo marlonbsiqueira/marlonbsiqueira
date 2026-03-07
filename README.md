@@ -16,7 +16,6 @@
 https://www.linkedin.com/in/marlonbsiqueira
 https://github.com/marlonbsiqueira
 https://www.youtube.com/@marlonbsiqueira468
-mailto:marlonbsiqueira@gmail.com
 </div>
 🎯 About Me
 
