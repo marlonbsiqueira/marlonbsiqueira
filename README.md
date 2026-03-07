@@ -88,16 +88,12 @@ Programming Languages
 📈 GitHub Analytics
 
 <div align="center">
-  <!-- GitHub Stats -->
   <img height="180em" src="https://github-readme-stats.vercel.app/api?username=marlonbsiqueira&show_icons=true&theme=github_dark&hide_border=true&count_private=true&include_all_commits=true" alt="GitHub Stats" />
-  <!-- Top Languages -->
   <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=marlonbsiqueira&layout=compact&theme=github_dark&hide_border=true&langs_count=8" alt="Top Languages" />
 </div>
-<!-- Activity Graph -->
 <div align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=marlonbsiqueira&theme=github-dark&hide_border=true&area=true&custom_title=Contribution%20Activity" alt="Contribution Activity" />
 </div>
-<!-- GitHub Trophies -->
 <div align="center">
   <img src="https://github-profile-trophy.vercel.app/?username=marlonbsiqueira&theme=darkhub&no-frame=true&margin-w=10&row=1" alt="GitHub Trophies" />
 </div>
@@ -125,16 +121,16 @@ Languages:
 🤝 Let's Connect
 
 I'm always interested in discussing:
-🔹 Finance Transformation & Digitalization
-🔹 SAP S/4HANA Implementation Strategies
-🔹 Intelligent Automation & RPA
-🔹 Data Analytics & Visualization
-🔹 Process Optimization & Lean Six Sigma
+Finance Transformation & Digitalization
+SAP S/4HANA Implementation Strategies
+Intelligent Automation & RPA
+Data Analytics & Visualization
+Process Optimization & Lean Six Sigma
 <div align="center">
 https://www.linkedin.com/in/marlonbsiqueira
 mailto:marlonbsiqueira@gmail.com
 </div>
 <div align="center">
-💡 "Bridging Finance and Technology for Measurable Business Impact"
+"Bridging Finance and Technology for Measurable Business Impact"
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0e75b6&height=100&section=footer" alt="Footer" />
 </div>
