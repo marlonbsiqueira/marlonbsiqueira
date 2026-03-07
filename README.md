@@ -199,17 +199,10 @@ I'm always interested in discussing:
 • Process Optimization & Lean Six Sigma  
 
 ---
-
 <div align="center">
 
 <a href="https://www.linkedin.com/in/marlonbsiqueira">
-LinkedIn
-</a>
-
-|
-
-<a href="mailto:marlonbsiqueira@gmail.com">
-Email
+<img src="https://img.shields.io/badge/Connect%20on%20LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
 </a>
 
 </div>
