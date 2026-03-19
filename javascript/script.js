@@ -2,13 +2,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const header = document.getElementById("header");
     const mobileBtn = document.getElementById("mobile_btn");
     const mobileMenu = document.getElementById("mobile_menu");
-    const mobileIcon = mobileBtn?.querySelector("i");
-    const allNavLinks = document.querySelectorAll('#nav_list a, #mobile_nav_list a');
-    const desktopNavLinks = document.querySelectorAll('#nav_list a');
+    const mobileIcon = mobileBtn ? mobileBtn.querySelector("i") : null;
+    const desktopNavLinks = document.querySelectorAll("#nav_list a");
+    const mobileNavLinks = document.querySelectorAll("#mobile_nav_list a");
+    const allNavLinks = document.querySelectorAll("#nav_list a, #mobile_nav_list a");
     const sections = document.querySelectorAll("main section[id]");
     const revealElements = document.querySelectorAll(".reveal");
 
     const toggleMobileMenu = () => {
+        if (!mobileMenu || !mobileBtn) return;
+
         const isOpen = mobileMenu.classList.toggle("active");
         mobileBtn.setAttribute("aria-expanded", String(isOpen));
         mobileBtn.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
@@ -20,6 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const closeMobileMenu = () => {
+        if (!mobileMenu || !mobileBtn) return;
+
         mobileMenu.classList.remove("active");
         mobileBtn.setAttribute("aria-expanded", "false");
         mobileBtn.setAttribute("aria-label", "Open menu");
@@ -41,6 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     const updateHeaderState = () => {
+        if (!header) return;
         header.classList.toggle("scrolled", window.scrollY > 24);
     };
 
@@ -61,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
             link.classList.toggle("active", isActive);
         });
 
-        document.querySelectorAll("#mobile_nav_list a").forEach(link => {
+        mobileNavLinks.forEach(link => {
             const isActive = link.getAttribute("href") === `#${currentSection}`;
             link.classList.toggle("active", isActive);
         });
@@ -93,8 +99,8 @@ document.addEventListener("DOMContentLoaded", () => {
         revealElements.forEach(el => el.classList.add("show"));
     }
 
-    document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape" && mobileMenu.classList.contains("active")) {
+    document.addEventListener("keydown", event => {
+        if (event.key === "Escape" && mobileMenu && mobileMenu.classList.contains("active")) {
             closeMobileMenu();
         }
     });
