@@ -1,82 +1,104 @@
-$(function () {
+document.addEventListener("DOMContentLoaded", () => {
+    const header = document.getElementById("header");
+    const mobileBtn = document.getElementById("mobile_btn");
+    const mobileMenu = document.getElementById("mobile_menu");
+    const mobileIcon = mobileBtn?.querySelector("i");
+    const allNavLinks = document.querySelectorAll('#nav_list a, #mobile_nav_list a');
+    const desktopNavLinks = document.querySelectorAll('#nav_list a');
+    const sections = document.querySelectorAll("main section[id]");
+    const revealElements = document.querySelectorAll(".reveal");
 
-    const $mobileBtn = $('#mobile_btn');
-    const $mobileMenu = $('#mobile_menu');
-    const $icon = $mobileBtn.find('i');
+    const toggleMobileMenu = () => {
+        const isOpen = mobileMenu.classList.toggle("active");
+        mobileBtn.setAttribute("aria-expanded", String(isOpen));
+        mobileBtn.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
 
-    function toggleMobileMenu() {
-        $mobileMenu.toggleClass('active');
-        $icon.toggleClass('fa-bars fa-x');
-    }
-
-    $mobileBtn.on('click', toggleMobileMenu);
-    $('#mobile_nav_list a').on('click', () => {
-        $mobileMenu.removeClass('active');
-        $icon.removeClass('fa-x').addClass('fa-bars');
-    });
-
-    let lastScrollY = window.scrollY;
-
-    const handleScroll = () => {
-        if (Math.abs(window.scrollY - lastScrollY) > 10) {
-            lastScrollY = window.scrollY;
-            if (window.scrollY > 50) {
-                $('header').addClass('scrolled');
-            } else {
-                $('header').removeClass('scrolled');
-            }
+        if (mobileIcon) {
+            mobileIcon.classList.toggle("fa-bars", !isOpen);
+            mobileIcon.classList.toggle("fa-x", isOpen);
         }
     };
 
-    window.addEventListener('scroll', () => {
-        requestAnimationFrame(handleScroll);
-    });
+    const closeMobileMenu = () => {
+        mobileMenu.classList.remove("active");
+        mobileBtn.setAttribute("aria-expanded", "false");
+        mobileBtn.setAttribute("aria-label", "Open menu");
 
-    // Header shadow
-    $(window).on('scroll', function () {
-        if ($(window).scrollTop() > 50) {
-            $('header').addClass('scrolled');
-        } else {
-            $('header').removeClass('scrolled');
+        if (mobileIcon) {
+            mobileIcon.classList.remove("fa-x");
+            mobileIcon.classList.add("fa-bars");
         }
+    };
+
+    if (mobileBtn) {
+        mobileBtn.addEventListener("click", toggleMobileMenu);
+    }
+
+    allNavLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            closeMobileMenu();
+        });
     });
 
-    // Scroll reveal
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('show');
-            }
-        });
-    }, { threshold: 0.15 });
+    const updateHeaderState = () => {
+        header.classList.toggle("scrolled", window.scrollY > 24);
+    };
 
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-    // ACTIVE MENU (versão profissional melhorada)
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll("#nav_list a");
-
-    window.addEventListener("scroll", () => {
-
+    const updateActiveSection = () => {
         let currentSection = "";
 
         sections.forEach(section => {
-            const sectionTop = section.offsetTop - 120;
+            const sectionTop = section.offsetTop - 140;
             const sectionHeight = section.offsetHeight;
 
-            if (window.scrollY >= sectionTop &&
-                window.scrollY < sectionTop + sectionHeight) {
+            if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
                 currentSection = section.getAttribute("id");
             }
         });
 
-        navLinks.forEach(link => {
-            link.classList.remove("active");
-            if (link.getAttribute("href") === "#" + currentSection) {
-                link.classList.add("active");
-            }
+        desktopNavLinks.forEach(link => {
+            const isActive = link.getAttribute("href") === `#${currentSection}`;
+            link.classList.toggle("active", isActive);
         });
 
+        document.querySelectorAll("#mobile_nav_list a").forEach(link => {
+            const isActive = link.getAttribute("href") === `#${currentSection}`;
+            link.classList.toggle("active", isActive);
+        });
+    };
+
+    const handleScroll = () => {
+        updateHeaderState();
+        updateActiveSection();
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", updateActiveSection);
+
+    if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.14,
+            rootMargin: "0px 0px -40px 0px"
+        });
+
+        revealElements.forEach(el => observer.observe(el));
+    } else {
+        revealElements.forEach(el => el.classList.add("show"));
+    }
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && mobileMenu.classList.contains("active")) {
+            closeMobileMenu();
+        }
     });
 
+    updateHeaderState();
+    updateActiveSection();
 });
