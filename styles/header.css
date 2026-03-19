@@ -1,109 +1,168 @@
 header {
-    width: 100%;
-    padding: 20px 8%;
     position: sticky;
     top: 0;
-    background-color: #EAF2F8;
     z-index: 1000;
-    transition: box-shadow 0.3s ease;
+    width: 100%;
+    background: rgba(234, 242, 248, 0.88);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid transparent;
+    transition: background 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 header.scrolled {
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(10, 25, 47, 0.08);
+    border-color: rgba(31, 58, 95, 0.08);
 }
 
 #navbar {
+    width: min(100%, 1200px);
+    margin: 0 auto;
+    padding: 18px 8%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 24px;
+}
+
+.logo-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(36, 7, 222, 0.12), rgba(31, 58, 95, 0.12));
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(36, 7, 222, 0.12);
 }
 
 #nav_logo {
-    font-size: 24px;
+    font-size: 1.35rem;
     color: #1F3A5F;
 }
 
 #nav_list {
     display: flex;
+    align-items: center;
     list-style: none;
-    gap: 40px;
+    gap: 28px;
+    margin-left: auto;
 }
 
 .nav-item a {
     text-decoration: none;
     color: #1F3A5F;
     font-weight: 600;
+    font-size: 0.95rem;
     position: relative;
-    padding-bottom: 6px;
+    padding-bottom: 8px;
+    transition: color 0.3s ease;
 }
 
-/* Underline base */
 .nav-item a::after {
     content: "";
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 0%;
+    width: 0;
     height: 2px;
-    background-color: #2407de;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #2407de, #1F3A5F);
     transition: width 0.3s ease;
 }
 
-/* Hover effect */
-.nav-item a:hover::after {
+.nav-item a:hover::after,
+#nav_list a.active::after,
+#mobile_nav_list a.active::after {
     width: 100%;
 }
 
-/* ACTIVE LINK (quando rola a página) */
-#nav_list a.active::after {
-    width: 100%;
+.nav-item a:hover,
+#nav_list a.active,
+#mobile_nav_list a.active {
+    color: #2407de;
 }
 
-/* MOBILE */
+.nav-cta {
+    white-space: nowrap;
+}
 
 #mobile_btn {
     display: none;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
+    background: #fff;
+    border: 1px solid rgba(31, 58, 95, 0.12);
+    color: #1F3A5F;
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    font-size: 1.15rem;
     cursor: pointer;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#mobile_btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 22px rgba(0, 0, 0, 0.08);
 }
 
 #mobile_menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: #EAF2F8;
-    flex-direction: column;
-    align-items: center;
+    width: min(100%, 1200px);
+    margin: 0 auto;
+    padding: 0 8%;
     overflow: hidden;
     max-height: 0;
-    transition: max-height 0.4s ease;
+    transition: max-height 0.35s ease, padding-bottom 0.35s ease;
 }
 
 #mobile_menu.active {
-    max-height: 500px;
+    max-height: 420px;
+    padding-bottom: 20px;
 }
 
 #mobile_nav_list {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    margin: 20px 0;
+    gap: 16px;
+    padding: 10px 0 20px;
 }
 
-/* RESPONSIVE */
+#mobile_nav_list .nav-item a {
+    display: inline-block;
+}
 
 @media (max-width: 1170px) {
-
     #nav_list,
-    #navbar .btn-default {
+    #navbar .nav-cta {
         display: none;
     }
 
     #mobile_btn {
-        display: block;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #navbar {
+        padding: 16px 6%;
+    }
+
+    #mobile_menu {
+        padding: 0 6%;
+    }
+}
+
+@media (max-width: 600px) {
+    #navbar {
+        padding: 14px 5%;
+    }
+
+    #mobile_menu {
+        padding: 0 5%;
     }
 }
