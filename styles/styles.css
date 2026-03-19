@@ -86,8 +86,6 @@ section[id] {
     top: 20px;
 }
 
-/* SECTION TITLES */
-
 .section-title {
     font-size: clamp(1.9rem, 3vw, 2.6rem);
     margin-bottom: 42px;
@@ -115,8 +113,6 @@ section[id] {
     color: rgba(31, 58, 95, 0.94);
 }
 
-/* BUTTONS */
-
 .btn-default {
     display: inline-flex;
     align-items: center;
@@ -142,8 +138,6 @@ section[id] {
     outline-offset: 3px;
 }
 
-/* REVEAL */
-
 .reveal {
     opacity: 0;
     transform: translateY(48px);
@@ -163,8 +157,6 @@ section[id] {
     opacity: 1;
     transform: translate(0, 0);
 }
-
-/* ROWS */
 
 .row {
     display: grid;
@@ -226,8 +218,6 @@ section[id] {
     margin: 0 auto 42px;
 }
 
-/* ALTERNATING BACKGROUNDS */
-
 #finance,
 #continuousimprovement,
 #technicalskills {
@@ -240,8 +230,6 @@ section[id] {
 #continuousimprovement .section-title {
     text-align: left;
 }
-
-/* SOCIAL */
 
 .social-media-buttons,
 .contact-social {
@@ -285,8 +273,6 @@ section[id] {
     outline: 3px solid rgba(36, 7, 222, 0.2);
     outline-offset: 3px;
 }
-
-/* TECHNICAL SKILLS */
 
 .skills-container {
     display: grid;
@@ -369,8 +355,6 @@ section[id] {
     content: "✔";
 }
 
-/* CONTACT */
-
 .contact {
     text-align: center;
 }
@@ -416,8 +400,6 @@ section[id] {
     box-shadow: 0 0 0 4px rgba(36, 7, 222, 0.08);
 }
 
-/* FOOTER */
-
 footer {
     margin-top: 50px;
 }
@@ -433,8 +415,6 @@ footer {
     margin-top: 6px;
     opacity: 0.92;
 }
-
-/* RESPONSIVE */
 
 @media (max-width: 1100px) {
     section {
