@@ -1,26 +1,25 @@
 #home {
     display: grid;
-    grid-template-columns: minmax(320px, 1fr) minmax(320px, 0.92fr);
+    grid-template-columns: minmax(320px, 1.05fr) minmax(320px, 0.95fr);
     align-items: center;
-    gap: clamp(32px, 5vw, 72px);
+    gap: clamp(28px, 4vw, 56px);
     min-height: calc(100vh - 88px);
-    padding-top: 34px;
-    padding-bottom: 72px;
+    padding-top: 28px;
+    padding-bottom: 56px;
 }
 
 #cta {
     display: flex;
     flex-direction: column;
-    gap: 22px;
-    max-width: 640px;
+    gap: 20px;
+    max-width: 720px;
 }
 
 #cta .title {
-    font-size: clamp(2.2rem, 4vw, 4.35rem);
-    line-height: 1.02;
-    letter-spacing: -0.05em;
-    max-width: 11ch;
-    text-wrap: balance;
+    font-size: clamp(1.9rem, 3vw, 3.4rem);
+    line-height: 1.08;
+    letter-spacing: -0.04em;
+    max-width: 12.5ch;
 }
 
 #cta .title span {
@@ -30,7 +29,7 @@
 #cta .description {
     max-width: 620px;
     font-size: 1rem;
-    line-height: 1.85;
+    line-height: 1.8;
     color: rgba(31, 58, 95, 0.94);
 }
 
@@ -41,8 +40,8 @@
 }
 
 #banner img {
-    width: min(100%, 520px);
-    max-height: 70vh;
+    width: min(100%, 620px);
+    max-height: 560px;
     height: auto;
     object-fit: contain;
     transition: transform 0.35s ease, filter 0.35s ease;
@@ -69,8 +68,8 @@
     }
 
     #cta .title {
-        max-width: 12ch;
-        font-size: clamp(2rem, 7vw, 3.4rem);
+        max-width: 13ch;
+        font-size: clamp(2rem, 7vw, 3rem);
     }
 
     #banner {
@@ -90,8 +89,8 @@
 
     #cta .title {
         max-width: 12ch;
-        font-size: clamp(1.9rem, 8.5vw, 2.8rem);
-        line-height: 1.06;
+        font-size: clamp(1.9rem, 8vw, 2.6rem);
+        line-height: 1.08;
     }
 
     #cta .description {
