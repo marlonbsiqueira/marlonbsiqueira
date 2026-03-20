@@ -33,6 +33,10 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+body.menu-open {
+    overflow: hidden;
+}
+
 img {
     display: block;
     max-width: 100%;
@@ -112,7 +116,11 @@ section[id] {
     box-shadow: 0 18px 30px rgba(36, 7, 222, 0.22);
 }
 
-.btn-default:focus-visible {
+.btn-default:focus-visible,
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
     outline: 3px solid rgba(36, 7, 222, 0.22);
     outline-offset: 3px;
 }
