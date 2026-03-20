@@ -18,8 +18,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (mobileIcon) {
             mobileIcon.classList.toggle("fa-bars", !isOpen);
-            mobileIcon.classList.toggle("fa-x", isOpen);
+            mobileIcon.classList.toggle("fa-xmark", isOpen);
         }
+
+        document.body.classList.toggle("menu-open", isOpen);
     };
 
     const closeMobileMenu = () => {
@@ -30,9 +32,11 @@ document.addEventListener("DOMContentLoaded", () => {
         mobileBtn.setAttribute("aria-label", "Open menu");
 
         if (mobileIcon) {
-            mobileIcon.classList.remove("fa-x");
+            mobileIcon.classList.remove("fa-xmark");
             mobileIcon.classList.add("fa-bars");
         }
+
+        document.body.classList.remove("menu-open");
     };
 
     if (mobileBtn) {
@@ -52,24 +56,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const updateActiveSection = () => {
         let currentSection = "";
+        const scrollPosition = window.scrollY + 160;
 
         sections.forEach(section => {
-            const sectionTop = section.offsetTop - 140;
+            const sectionTop = section.offsetTop;
             const sectionHeight = section.offsetHeight;
 
-            if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
                 currentSection = section.getAttribute("id");
             }
         });
 
+        if (!currentSection && sections.length > 0) {
+            currentSection = sections[0].getAttribute("id");
+        }
+
         desktopNavLinks.forEach(link => {
             const isActive = link.getAttribute("href") === `#${currentSection}`;
             link.classList.toggle("active", isActive);
+            link.setAttribute("aria-current", isActive ? "page" : "false");
         });
 
         mobileNavLinks.forEach(link => {
             const isActive = link.getAttribute("href") === `#${currentSection}`;
             link.classList.toggle("active", isActive);
+            link.setAttribute("aria-current", isActive ? "page" : "false");
         });
     };
 
@@ -79,7 +90,13 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
-    window.addEventListener("resize", updateActiveSection);
+    window.addEventListener("resize", () => {
+        updateActiveSection();
+
+        if (window.innerWidth > 1170) {
+            closeMobileMenu();
+        }
+    });
 
     if ("IntersectionObserver" in window) {
         const observer = new IntersectionObserver((entries, obs) => {
@@ -94,9 +111,9 @@ document.addEventListener("DOMContentLoaded", () => {
             rootMargin: "0px 0px -40px 0px"
         });
 
-        revealElements.forEach(el => observer.observe(el));
+        revealElements.forEach(element => observer.observe(element));
     } else {
-        revealElements.forEach(el => el.classList.add("show"));
+        revealElements.forEach(element => element.classList.add("show"));
     }
 
     document.addEventListener("keydown", event => {
