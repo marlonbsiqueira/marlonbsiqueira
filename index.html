@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <meta name="description" content="Finance & Digital Transformation specialist with 12+ years of international experience delivering SAP S/4HANA transformation, intelligent automation, and advanced analytics across multinational environments.">
+    <meta name="keywords" content="Finance, Automation, Lean Six Sigma, RPA, Power BI, SAP, Process Improvement, Data Analytics, Continuous Improvement, Business Transformation">
+    <meta name="author" content="Marlon B Siqueira">
+
+    <!-- Open Graph -->
+    <meta property="og:type"        content="website">
+    <meta property="og:title"       content="Marlon B Siqueira | Finance & Digital Transformation">
+    <meta property="og:description" content="Finance & Digital Transformation specialist delivering SAP S/4HANA transformation, intelligent automation, and advanced analytics across multinational environments.">
+    <meta property="og:image"       content="./images/og-cover.jpg">
+    <meta property="og:url"         content="https://marlonbsiqueira.com">
+    <meta property="og:locale"      content="en_GB">
+    <meta name="twitter:card"       content="summary_large_image">
+    <meta name="twitter:title"      content="Marlon B Siqueira | Finance & Digital Transformation">
+    <meta name="twitter:description" content="12+ years delivering finance transformation across Europe and Latin America.">
+    <meta name="twitter:image"      content="./images/og-cover.jpg">
+
+    <!-- hreflang -->
+    <link rel="alternate" hreflang="en" href="https://marlonbsiqueira.com/">
+    <link rel="alternate" hreflang="pt" href="https://marlonbsiqueira.com/?lang=pt">
+
+    <title>Marlon B Siqueira | Finance & Digital Transformation</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/home.css">
+    <link rel="stylesheet" href="./styles/print.css" media="print">
+</head>
+<body>
+
+    <div class="site-bg" aria-hidden="true">
+        <span class="bg-orb orb-1"></span>
+        <span class="bg-orb orb-2"></span>
+        <span class="bg-grid"></span>
+    </div>
+
+    <!-- ═══════════ HEADER ═══════════ -->
+    <header id="header">
+        <nav id="navbar" aria-label="Main navigation">
+            <a href="#home" class="brand" aria-label="Go to homepage">
+                <span class="brand-text">
+                    <strong>Marlon B Siqueira</strong>
+                    <small data-i18n="brand_subtitle">Finance &amp; Digital Transformation</small>
+                </span>
+            </a>
+
+            <ul id="nav_list">
+                <li class="nav-item"><a href="#home"                 data-i18n="nav_home">Home</a></li>
+                <li class="nav-item"><a href="#highlights"           data-i18n="nav_highlights">Highlights</a></li>
+                <li class="nav-item"><a href="#expertise"            data-i18n="nav_experience">Experience</a></li>
+                <li class="nav-item"><a href="#finance"              data-i18n="nav_finance">Finance</a></li>
+                <li class="nav-item"><a href="#automation"           data-i18n="nav_automation">Automation</a></li>
+                <li class="nav-item"><a href="#continuousimprovement" data-i18n="nav_ci">CI</a></li>
+                <li class="nav-item"><a href="#technicalskills"      data-i18n="nav_skills">Skills</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <div class="language-switcher" aria-label="Language selector">
+                    <button type="button" class="lang-btn active" data-lang="en">EN</button>
+                    <button type="button" class="lang-btn" data-lang="pt">PT</button>
+                </div>
+                <button type="button" id="theme-toggle" class="theme-btn" aria-label="Toggle dark mode">
+                    <i class="fa-solid fa-moon" id="theme-icon"></i>
+                </button>
+                <a href="#contact" class="btn-primary nav-cta" data-i18n="nav_cta">Contact me</a>
+            </div>
+
+            <button id="mobile_btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile_menu">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+        </nav>
+
+        <div id="mobile_menu" aria-label="Mobile navigation">
+            <ul id="mobile_nav_list">
+                <li class="nav-item"><a href="#home"                 data-i18n="nav_home">Home</a></li>
+                <li class="nav-item"><a href="#highlights"           data-i18n="nav_highlights">Highlights</a></li>
+                <li class="nav-item"><a href="#expertise"            data-i18n="nav_experience">Experience</a></li>
+                <li class="nav-item"><a href="#finance"              data-i18n="nav_finance">Finance</a></li>
+                <li class="nav-item"><a href="#automation"           data-i18n="nav_automation">Automation</a></li>
+                <li class="nav-item"><a href="#continuousimprovement" data-i18n="nav_ci">Continuous Improvement</a></li>
+                <li class="nav-item"><a href="#technicalskills"      data-i18n="nav_skills">Technical Skills</a></li>
+            </ul>
+            <div class="mobile-controls">
+                <div class="language-switcher">
+                    <button type="button" class="lang-btn active" data-lang="en">EN</button>
+                    <button type="button" class="lang-btn" data-lang="pt">PT</button>
+                </div>
+                <button type="button" id="theme-toggle-mobile" class="theme-btn" aria-label="Toggle dark mode">
+                    <i class="fa-solid fa-moon" id="theme-icon-mobile"></i>
+                </button>
+            </div>
+            <a href="#contact" class="btn-primary mobile-cta" data-i18n="nav_cta">Contact me</a>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ═══════════ HOME ═══════════ -->
+        <section id="home">
+            <div id="cta" class="reveal left">
+                <div class="eyebrow">
+                    <span class="eyebrow-dot"></span>
+                    <span data-i18n="hero_eyebrow">12+ Years · Europe &amp; Latin America</span>
+                </div>
+
+                <h1 class="title">
+                    <span data-i18n="hero_line1">Finance Transformation Through</span><br>
+                    <span class="accent" data-i18n="hero_accent1">SAP · Automation · Data</span>
+                </h1>
+
+                <div class="hero-pillars">
+                    <div class="hero-pillar">
+                        <i class="fa-solid fa-diagram-project" aria-hidden="true"></i>
+                        <span data-i18n="hero_pillar1">SAP S/4HANA Transformation</span>
+                    </div>
+                    <div class="hero-pillar">
+                        <i class="fa-solid fa-robot" aria-hidden="true"></i>
+                        <span data-i18n="hero_pillar2">Intelligent Automation &amp; RPA</span>
+                    </div>
+                    <div class="hero-pillar">
+                        <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+                        <span data-i18n="hero_pillar3">Power BI &amp; Performance Analytics</span>
+                    </div>
+                </div>
+
+                <p class="description" data-i18n="hero_description">
+                    Finance &amp; Digital Transformation specialist with 12+ years of international experience delivering SAP S/4HANA transformation, intelligent automation, and advanced analytics across multinational environments. Focused on improving efficiency, strengthening controls, and enabling faster decision-making.
+                </p>
+
+                <div class="home-tags" aria-label="Key competencies">
+                    <span>SAP S/4HANA</span>
+                    <span>Finance Transformation</span>
+                    <span>RPA &amp; Automation</span>
+                    <span>Power BI &amp; Data</span>
+                    <span>SOX / IFRS Controls</span>
+                </div>
+
+                <div class="home-actions">
+                    <a href="#highlights" class="btn-primary">
+                        <span data-i18n="hero_cta_primary">View Highlights</span>
+                    </a>
+                    <a href="#expertise" class="btn-ghost">
+                        <span data-i18n="hero_cta_secondary">Full Experience</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="social-media-buttons" aria-label="Social media links">
+                    <a href="https://www.linkedin.com/in/marlonbsiqueira/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@marlonbsiqueira468" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div id="banner" class="reveal right">
+                <img src="./images/Menu.png"
+                     alt="Finance and digital transformation professional"
+                     width="560" height="560"
+                     loading="eager">
+            </div>
+        </section>
+
+        <!-- ═══════════ BY THE NUMBERS ═══════════ -->
+        <section id="numbers" aria-label="Career metrics">
+            <div class="numbers-grid">
+                <div class="number-card reveal">
+                    <span class="number-value" data-target="12" data-suffix="+">0</span>
+                    <span class="number-label" data-i18n="num_years">Years of experience</span>
+                </div>
+                <div class="number-card reveal">
+                    <span class="number-value" data-target="30" data-suffix="+">0</span>
+                    <span class="number-label" data-i18n="num_jurisdictions">European jurisdictions managed</span>
+                </div>
+                <div class="number-card reveal">
+                    <span class="number-value" data-target="70" data-suffix="+">0</span>
+                    <span class="number-label" data-i18n="num_leaders">Leaders receiving weekly reports</span>
+                </div>
+                <div class="number-card reveal">
+                    <span class="number-value" data-target="5" data-suffix="">0</span>
+                    <span class="number-label" data-i18n="num_countries">Countries worked in</span>
+                </div>
+                <div class="number-card reveal">
+                    <span class="number-value" data-target="4000" data-suffix="+">0</span>
+                    <span class="number-label" data-i18n="num_hours">Hours saved through automation</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ WHAT I BRING ═══════════ -->
+        <section id="bring">
+            <div class="section-header reveal">
+                <h2 class="section-title" data-i18n="bring_title">What I Bring to a Role</h2>
+                <p class="section-subtitle" data-i18n="bring_subtitle">Three capabilities that compound when applied together.</p>
+            </div>
+
+            <div class="bring-grid">
+                <div class="bring-card reveal left">
+                    <div class="bring-icon">
+                        <i class="fa-solid fa-landmark" aria-hidden="true"></i>
+                    </div>
+                    <h3 data-i18n="bring_1_title">Financial Rigour</h3>
+                    <p data-i18n="bring_1_text">Deep command of management accounting, budget control, IFRS/SOX compliance, and financial reporting across multiple jurisdictions. I build finance functions that are audit-ready, accurate, and trusted by leadership.</p>
+                    <ul class="bring-list">
+                        <li data-i18n="bring_1_li1">Month-end close &amp; consolidation</li>
+                        <li data-i18n="bring_1_li2">VAT compliance across 30+ EU jurisdictions</li>
+                        <li data-i18n="bring_1_li3">Board-level KPI reporting</li>
+                        <li data-i18n="bring_1_li4">Cost control &amp; variance analysis</li>
+                    </ul>
+                </div>
+
+                <div class="bring-card reveal">
+                    <div class="bring-icon">
+                        <i class="fa-solid fa-gears" aria-hidden="true"></i>
+                    </div>
+                    <h3 data-i18n="bring_2_title">Operational Transformation</h3>
+                    <p data-i18n="bring_2_text">Lean Six Sigma Black Belt with hands-on experience redesigning financial and operational processes from the ground up — cutting cycle times, eliminating rework, and building the discipline of continuous improvement into teams.</p>
+                    <ul class="bring-list">
+                        <li data-i18n="bring_2_li1">DMAIC &amp; Value Stream Mapping</li>
+                        <li data-i18n="bring_2_li2">Cross-functional process redesign</li>
+                        <li data-i18n="bring_2_li3">Kaizen facilitation &amp; coaching</li>
+                        <li data-i18n="bring_2_li4">R2R, P2P &amp; OTC optimisation</li>
+                    </ul>
+                </div>
+
+                <div class="bring-card reveal right">
+                    <div class="bring-icon">
+                        <i class="fa-solid fa-code" aria-hidden="true"></i>
+                    </div>
+                    <h3 data-i18n="bring_3_title">Technical Delivery</h3>
+                    <p data-i18n="bring_3_text">Hands-on delivery of automation solutions using RPA, Power Platform, Python, and SAP — not as a project sponsor, but as the person who builds and deploys. I bridge the gap between finance and IT with precision and accountability.</p>
+                    <ul class="bring-list">
+                        <li data-i18n="bring_3_li1">RPA: Automation Anywhere &amp; Blue Prism</li>
+                        <li data-i18n="bring_3_li2">Power BI dashboards &amp; DAX modelling</li>
+                        <li data-i18n="bring_3_li3">SAP S/4HANA configuration</li>
+                        <li data-i18n="bring_3_li4">Python, VBA &amp; Power Automate</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ CAREER HIGHLIGHTS ═══════════ -->
+        <section id="highlights">
+            <div class="section-header reveal">
+                <h2 class="section-title" data-i18n="hl_title">Career Highlights</h2>
+                <p class="section-subtitle" data-i18n="hl_subtitle">Selected projects that demonstrate impact across finance, automation, and operations.</p>
+            </div>
+
+            <div class="highlights-grid">
+
+                <article class="highlight-card reveal left">
+                    <div class="highlight-meta">
+                        <span class="highlight-company">Stellantis</span>
+                        <span class="highlight-tag" data-i18n="hl_tag_auto">Automation · Europe</span>
+                    </div>
+                    <h3 class="highlight-title" data-i18n="hl_1_title">Finance Process Automation Programme</h3>
+                    <div class="highlight-body">
+                        <div class="highlight-step">
+                            <span class="step-label" data-i18n="step_challenge">Challenge</span>
+                            <p data-i18n="hl_1_challenge">Finance teams across multiple European entities were spending significant time on manual reconciliations, data entry, and report compilation — leaving little capacity for analysis or decision support.</p>
+                        </div>
+                        <div class="highlight-step">
+                            <span class="step-label" data-i18n="step_action">Action</span>
+                            <p data-i18n="hl_1_action">Led end-to-end process mapping across R2R, P2P, and OTC functions, then designed and deployed RPA bots and Power Automate flows to eliminate the highest-volume manual tasks. Integrated with SAP S/4HANA and built Power BI dashboards for real-time monitoring.</p>
+                        </div>
+                        <div class="highlight-step highlight-outcome">
+                            <span class="step-label" data-i18n="step_outcome">Outcome</span>
+                            <p data-i18n="hl_1_outcome">Delivered automation solutions saving thousands of hours annually across entities. Weekly dashboards now distributed to 70+ European leaders, replacing manual PowerPoint reporting cycles.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="highlight-card reveal">
+                    <div class="highlight-meta">
+                        <span class="highlight-company">ALE Combustíveis</span>
+                        <span class="highlight-tag" data-i18n="hl_tag_cost">Cost &amp; Pricing · Brazil</span>
+                    </div>
+                    <h3 class="highlight-title" data-i18n="hl_2_title">Fuel Cost Optimisation &amp; Pricing Analysis at Scale</h3>
+                    <div class="highlight-body">
+                        <div class="highlight-step">
+                            <span class="step-label" data-i18n="step_challenge">Challenge</span>
+                            <p data-i18n="hl_2_challenge">Fuel pricing and cost analysis required accurate integration of logistics, tax, storage, blending, and procurement variables across a large national distribution network in Brazil.</p>
+                        </div>
+                        <div class="highlight-step">
+                            <span class="step-label" data-i18n="step_action">Action</span>
+                            <p data-i18n="hl_2_action">Built end-to-end cost models and pricing analyses across 40+ distribution bases, translating operational and tax complexity into decision-ready financial inputs for the commercial and finance teams.</p>
+                        </div>
+                        <div class="highlight-step highlight-outcome">
+                            <span class="step-label" data-i18n="step_outcome">Outcome</span>
+                            <p data-i18n="hl_2_outcome">Supported pricing decisions at national scale and contributed to 15–20% expense reduction across business units through stronger cost visibility, KPI management, and operational analysis.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="highlight-card reveal right">
+                    <div class="highlight-meta">
+                        <span class="highlight-company">Vale S.A.</span>
+                        <span class="highlight-tag" data-i18n="hl_tag_mining">Lean Six Sigma · Brazil</span>
+                    </div>
+                    <h3 class="highlight-title" data-i18n="hl_3_title">Lean Six Sigma Deployment Across Iron Ore Operations</h3>
+                    <div class="highlight-body">
+                        <div class="highlight-step">
+                            <span class="step-label" data-i18n="step_challenge">Challenge</span>
+                            <p data-i18n="hl_3_challenge">Frontline teams across iron ore extraction sites in Operations, Maintenance, Logistics, and Administration lacked a structured methodology for identifying waste and sustaining improvement.</p>
+                        </div>
+                        <div class="highlight-step">
+                            <span class="step-label" data-i18n="step_action">Action</span>
+                            <p data-i18n="hl_3_action">Designed and delivered Lean Six Sigma training programmes directly on-site, facilitating Kaizen workshops and applying PDCA, 5S, Pareto, and Ishikawa tools with frontline and supervisory teams in real operational environments.</p>
+                        </div>
+                        <div class="highlight-step highlight-outcome">
+                            <span class="step-label" data-i18n="step_outcome">Outcome</span>
+                            <p data-i18n="hl_3_outcome">Built continuous improvement capability across multiple operational units, embedding structured problem-solving methods into daily team routines and reducing recurring operational waste.</p>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ═══════════ EXPERTISE ═══════════ -->
+        <section id="expertise">
+            <div class="section-header reveal">
+                <h2 class="section-title" data-i18n="exp_title">Education &amp; Experience</h2>
+                <p class="section-subtitle" data-i18n="exp_subtitle">A track record built across industries, continents, and complex environments.</p>
+            </div>
+
+            <img src="./images/education.jpg"
+                 class="center-image reveal"
+                 alt="Education and academic background"
+                 width="740" height="420"
+                 loading="lazy"
+                 decoding="async"
+                 data-i18n-alt="edu_img_alt">
+
+            <h3 class="subsection-title reveal" data-i18n="exp_sub">Professional Experience</h3>
+
+            <div class="row reveal left">
+                <img src="./images/Vale.png" alt="Vale S.A. — Mining & Operations Brazil"
+                     width="400" height="280" loading="lazy" decoding="async">
+                <div class="text">
+                    <div class="company-meta">
+                        <h4>Vale S.A.</h4>
+                        <span class="company-tag" data-i18n="vale_tag">Mining &amp; Operations · Brazil</span>
+                    </div>
+                    <ul class="outcome-list">
+                        <li data-i18n="vale_li1">Delivered Lean Six Sigma training across iron ore extraction sites, covering Operations, Maintenance, Logistics, and Administration</li>
+                        <li data-i18n="vale_li2">Applied Kaizen, PDCA, 5S, Pareto, Ishikawa, and Gantt tools directly in industrial environments with frontline teams</li>
+                        <li data-i18n="vale_li3">Embedded structured problem-solving methods into daily routines, reducing recurring operational waste</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row reverse reveal right">
+                <img src="./images/Ale.png" alt="ALE — Energy & Finance Brazil"
+                     width="400" height="280" loading="lazy" decoding="async">
+                <div class="text">
+                    <div class="company-meta">
+                        <h4>ALE Combustíveis</h4>
+                        <span class="company-tag" data-i18n="ale_tag">Fuel Distribution &amp; Finance · Brazil</span>
+                    </div>
+                    <ul class="outcome-list">
+                        <li data-i18n="ale_li1">Led cost optimisation and budget management across multiple business units, driving measurable reductions in operating expenses</li>
+                        <li data-i18n="ale_li2">Applied Balanced Scorecard and KPI frameworks to support strategic decision-making at business unit level</li>
+                        <li data-i18n="ale_li3">Improved pricing accuracy and financial modelling, enabling more reliable performance forecasting</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row reveal left">
+                <img src="./images/Meridian.png" alt="Meridian — Tax & Compliance Europe"
+                     width="400" height="280" loading="lazy" decoding="async">
+                <div class="text">
+                    <div class="company-meta">
+                        <h4>Meridian</h4>
+                        <span class="company-tag" data-i18n="meridian_tag">Tax &amp; Compliance · Europe</span>
+                    </div>
+                    <ul class="outcome-list">
+                        <li data-i18n="meridian_li1">Managed VAT compliance and tax benefit calculations for multinational clients across 30+ European jurisdictions</li>
+                        <li data-i18n="meridian_li2">Built automated validation tools that reduced manual review time per submission cycle and improved accuracy</li>
+                        <li data-i18n="meridian_li3">Delivered audit-ready compliance output with zero material findings across all jurisdictions managed</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row reverse reveal right">
+                <img src="./images/Renova.jpg" alt="Renova — Social Programs Brazil"
+                     width="400" height="280" loading="lazy" decoding="async">
+                <div class="text">
+                    <div class="company-meta">
+                        <h4>Renova</h4>
+                        <span class="company-tag" data-i18n="renova_tag">Social Programs · Brazil</span>
+                    </div>
+                    <ul class="outcome-list">
+                        <li data-i18n="renova_li1">Managed budget allocation and resource planning across multiple social programmes, bringing financial discipline to complex multi-program operations</li>
+                        <li data-i18n="renova_li2">Implemented SAP procurement controls and automated reporting, improving transparency and governance</li>
+                        <li data-i18n="renova_li3">Standardised financial processes across programmes, reducing reporting lead time and improving accuracy</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row reveal left current-role">
+                <img src="./images/Stellantis.png" alt="Stellantis — Automotive Europe"
+                     width="400" height="280" loading="lazy" decoding="async">
+                <div class="text">
+                    <div class="company-meta">
+                        <h4>Stellantis</h4>
+                        <div class="company-meta-row">
+                            <span class="company-tag" data-i18n="stellantis_tag">Automotive · Europe</span>
+                            <span class="current-badge" data-i18n="current_role">Current Role</span>
+                        </div>
+                    </div>
+                    <ul class="outcome-list">
+                        <li data-i18n="stellantis_li1">Leading end-to-end finance process transformation across multiple European entities, applying RPA, Power Platform, SAP S/4HANA, and Lean Six Sigma</li>
+                        <li data-i18n="stellantis_li2">Built and distributed weekly Power BI dashboards to 70+ European leaders, replacing manual reporting cycles</li>
+                        <li data-i18n="stellantis_li3">Delivered automation solutions saving thousands of hours annually across R2R, P2P, and OTC functions</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ FINANCE ═══════════ -->
+        <section id="finance">
+            <div class="section-header reveal">
+                <h2 class="section-title" data-i18n="fin_title">Finance</h2>
+                <p class="section-subtitle" data-i18n="fin_subtitle">From budget control to board-level reporting — structured, accurate, and results-driven.</p>
+            </div>
+
+            <div class="row reveal left">
+                <img src="./images/Finance.jpg" alt="Financial strategy and reporting"
+                     width="400" height="300" loading="lazy" decoding="async">
+                <div class="text">
+                    <h3 data-i18n="fin_strategy_title">Financial Strategy</h3>
+                    <p data-i18n="fin_strategy_text">Extensive experience across multinational organisations — from budget management and cost control to VAT compliance, financial reporting, and SOX/IFRS standards. Working across Brazil, Ireland, Italy, the UK, and Portugal, I bring a proven ability to navigate any financial environment with speed, precision, and a results-driven mindset.</p>
+                </div>
+            </div>
+
+            <div class="row reverse reveal right">
+                <img src="./images/Dashboards.jpg" alt="Power BI dashboards and analytics"
+                     width="400" height="300" loading="lazy" decoding="async">
+                <div class="text">
+                    <h3 data-i18n="fin_dash_title">Dashboards &amp; Analytics</h3>
+                    <p data-i18n="fin_dash_text">Responsible for weekly reporting distributed to 70+ leaders across Europe, I translate complex financial and operational data into clear, modern, and actionable KPIs. With a background in visual management and graphic design, I build custom dashboards that surface anomalies, drive decisions, and deliver the right information to the right people — at every level of the organisation.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ AUTOMATION ═══════════ -->
+        <section id="automation">
+            <div class="section-header reveal">
+                <h2 class="section-title" data-i18n="auto_title">Automation</h2>
+                <p class="section-subtitle" data-i18n="auto_subtitle">Eliminating manual work at scale — so teams focus on what truly matters.</p>
+            </div>
+
+            <img src="./images/Automation.png" class="small-image reveal" alt="Automation and RPA"
+                 width="700" height="420" loading="lazy" decoding="async">
+
+            <p class="section-description reveal" data-i18n="auto_text">
+                My automation practice is built on one core principle: never automate a broken process. Before a single workflow is deployed, I map, challenge, and optimise — ensuring that what gets automated is already working correctly. I specialise in identifying repetitive, low-value tasks and transforming them into intelligent workflows using the right tool for each context: RPA (Automation Anywhere, Blue Prism), Microsoft Power Platform (Power Automate, Power Apps), Python, VBA, and JavaScript. From finance reconciliations to cross-system data pipelines, I have delivered automation solutions that save thousands of hours annually.
+            </p>
+        </section>
+
+        <!-- ═══════════ CONTINUOUS IMPROVEMENT ═══════════ -->
+        <section id="continuousimprovement">
+            <div class="section-header reveal">
+                <h2 class="section-title" data-i18n="ci_title">Continuous Improvement</h2>
+                <p class="section-subtitle" data-i18n="ci_subtitle">Lean thinking applied to real operations — driving measurable, lasting change.</p>
+            </div>
+
+            <img src="./images/CI.png" class="small-image reveal" alt="Continuous Improvement and Lean Six Sigma"
+                 width="700" height="420" loading="lazy" decoding="async">
+
+            <p class="section-description reveal" data-i18n="ci_text">
+                As a certified Lean Six Sigma Black Belt, I have led improvement initiatives across manufacturing, logistics, finance, and shared services — delivering measurable reductions in cycle time, rework, and operational cost. My approach combines structured DMAIC methodology with hands-on workshop facilitation: from shop-floor Kaizen events at Vale's iron ore sites to cross-functional process redesigns at Stellantis. I apply Value Stream Mapping, 5S, Pareto analysis, Ishikawa diagrams, PDCA cycles, and Balanced Scorecard to diagnose root causes and sustain improvements beyond the project.
+            </p>
+        </section>
+
+        <!-- ═══════════ TECHNICAL SKILLS ═══════════ -->
+        <section id="technicalskills">
+            <div class="section-header reveal">
+                <h2 class="section-title" data-i18n="skills_title">Technical Skills</h2>
+                <p class="section-subtitle" data-i18n="skills_subtitle">The tools that power the transformation.</p>
+            </div>
+
+            <div class="skills-container">
+
+                <!-- Programming -->
+                <div class="skill-box reveal left">
+                    <div class="skill-box-icon"><i class="fa-solid fa-code"></i></div>
+                    <h3 data-i18n="skills_lang">Programming Languages</h3>
+
+                    <p class="skill-tier-label" data-i18n="tier_primary">Expert</p>
+                    <div class="skills-icons">
+                        <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+                                 alt="Python" width="26" height="26" loading="lazy">
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                                 alt="JavaScript" width="26" height="26" loading="lazy">
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/visualbasic/visualbasic-original.svg"
+                                 alt="VBA" width="26" height="26" loading="lazy">
+                            <span>VBA</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oracle/oracle-original.svg"
+                                 alt="SQL / Oracle" width="26" height="26" loading="lazy">
+                            <span>SQL / Oracle</span>
+                        </div>
+                    </div>
+
+                    <p class="skill-tier-label skill-tier-secondary" data-i18n="tier_secondary">Proficient</p>
+                    <div class="skills-icons skills-icons-secondary">
+                        <div class="skill-item skill-item-secondary">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg"
+                                 alt="Java" width="26" height="26" loading="lazy">
+                            <span>Java</span>
+                        </div>
+                        <div class="skill-item skill-item-secondary">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg"
+                                 alt="C#" width="26" height="26" loading="lazy">
+                            <span>C#</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technologies -->
+                <div class="skill-box reveal">
+                    <div class="skill-box-icon"><i class="fa-solid fa-gears"></i></div>
+                    <h3 data-i18n="skills_tech">Technologies &amp; Software</h3>
+
+                    <p class="skill-tier-label" data-i18n="tier_primary">Expert</p>
+                    <ul class="skills-list tech">
+                        <li>Power BI</li>
+                        <li>SAP S/4HANA</li>
+                        <li>Automation Anywhere</li>
+                        <li>Power Automate</li>
+                        <li>Advanced Excel / DAX</li>
+                    </ul>
+
+                    <p class="skill-tier-label skill-tier-secondary" data-i18n="tier_secondary">Proficient</p>
+                    <ul class="skills-list tech skills-list-secondary">
+                        <li>Blue Prism</li>
+                        <li>Power Apps</li>
+                        <li>Power Query</li>
+                    </ul>
+                </div>
+
+                <!-- Certifications -->
+                <div class="skill-box reveal right">
+                    <div class="skill-box-icon"><i class="fa-solid fa-certificate"></i></div>
+                    <h3 data-i18n="skills_cert">Certifications</h3>
+                    <ul class="skills-list cert">
+                        <li data-i18n="cert_1">Lean Six Sigma Black Belt</li>
+                        <li data-i18n="cert_2">Automation Anywhere RPA Certification</li>
+                        <li data-i18n="cert_3">Power BI Data Analytics</li>
+                        <li data-i18n="cert_4">SAP Financial Processes</li>
+                        <li data-i18n="cert_5">Finance &amp; Quantitative Modeling for Analysts</li>
+                        <li data-i18n="cert_6">Artificial Intelligence for Business</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ═══════════ CONTACT ═══════════ -->
+        <section class="contact" id="contact">
+            <div class="section-header reveal">
+                <h2 class="section-title" data-i18n="contact_title">Get In Touch</h2>
+                <p class="section-subtitle" data-i18n="contact_subtitle">Open to senior finance, automation, and transformation roles across Europe.</p>
+            </div>
+
+            <form id="contact-form" action="https://formsubmit.co/marlonbcsiqueira@gmail.com" method="POST" class="reveal">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://marlonbsiqueira.com/#contact">
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="name" data-i18n="form_name_label">Your Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Jane Smith" autocomplete="name">
+                    </div>
+                    <div class="form-field">
+                        <label for="email" data-i18n="form_email_label">Your Email</label>
+                        <input type="email" id="email" name="email" required placeholder="jane@company.com" autocomplete="email">
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label for="message" data-i18n="form_message_label">Your Message</label>
+                    <textarea id="message" name="message" rows="5" required data-i18n-placeholder="form_message" placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="btn-primary">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span data-i18n="form_btn">Send Message</span>
+                </button>
+                <p class="form-note" data-i18n="form_note">I typically respond within one business day.</p>
+            </form>
+
+            <div class="contact-social reveal">
+                <a href="https://www.linkedin.com/in/marlonbsiqueira/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://www.youtube.com/@marlonbsiqueira468" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p class="footer-name">Marlon B Siqueira</p>
+            <p class="footer-tagline" data-i18n="footer_tagline">Finance Transformation · SAP · Automation · Data</p>
+            <p class="footer-copy" data-i18n="footer_copy">© 2026 · All rights reserved</p>
+        </div>
+    </footer>
+
+    <script src="./javascript/script.js"></script>
+</body>
+</html>
