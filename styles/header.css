@@ -1,0 +1,229 @@
+header {
+    position: sticky;
+    top: 0; z-index: 1000; width: 100%;
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(26, 63, 255, 0.08);
+    transition: background 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+ 
+[data-theme="dark"] header {
+    background: rgba(13, 17, 23, 0.88);
+    border-bottom-color: rgba(77, 115, 255, 0.1);
+}
+ 
+header.scrolled {
+    background: rgba(255, 255, 255, 0.97);
+    box-shadow: 0 4px 24px rgba(10, 22, 40, 0.08);
+    border-color: rgba(26, 63, 255, 0.1);
+}
+ 
+[data-theme="dark"] header.scrolled {
+    background: rgba(13, 17, 23, 0.98);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+}
+ 
+#navbar {
+    width: min(100%, 1240px);
+    margin: 0 auto; padding: 14px 8%;
+    display: flex; align-items: center;
+    justify-content: space-between; gap: 20px;
+}
+ 
+/* ── Brand ───────────────────────────────────────── */
+.brand {
+    display: inline-flex; align-items: center;
+    gap: 0; text-decoration: none;
+    flex-shrink: 0; min-width: 0;
+}
+ 
+.brand-mark { display: none; }
+ 
+.brand-text {
+    display: flex; flex-direction: column;
+    justify-content: center; line-height: 1.05; min-width: 0;
+}
+ 
+.brand-text strong {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.02rem; font-weight: 700; font-style: italic;
+    color: var(--text); white-space: nowrap; letter-spacing: -0.01em;
+}
+ 
+.brand-text small {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.70rem; font-weight: 500;
+    color: var(--text-3); white-space: nowrap;
+    margin-top: 3px; letter-spacing: 0.07em; text-transform: uppercase;
+}
+ 
+/* ── Nav list ────────────────────────────────────── */
+#nav_list {
+    display: flex; align-items: center;
+    list-style: none; gap: 4px;
+    margin-left: auto; margin-right: 10px;
+}
+ 
+.nav-item a {
+    display: inline-flex; align-items: center;
+    text-decoration: none; color: var(--text-2);
+    font-family: 'Jost', sans-serif;
+    font-weight: 500; font-size: 0.88rem;
+    padding: 8px 13px; border-radius: 999px;
+    transition: color 0.2s ease, background 0.2s ease;
+    white-space: nowrap;
+}
+ 
+.nav-item a:hover,
+#nav_list a.active,
+#mobile_nav_list a.active {
+    color: var(--primary);
+    background: var(--primary-dim);
+}
+ 
+/* ── Nav actions ─────────────────────────────────── */
+.nav-actions {
+    display: flex; align-items: center;
+    gap: 10px; flex-shrink: 0;
+}
+ 
+/* ── Language switcher ───────────────────────────── */
+.language-switcher {
+    display: inline-flex; align-items: center; gap: 4px;
+    padding: 4px; border-radius: 999px;
+    background: var(--primary-dim);
+    border: 1px solid var(--border);
+}
+ 
+.lang-btn {
+    min-width: 40px; height: 32px; border: none;
+    border-radius: 999px; background: transparent;
+    color: var(--text-2);
+    font-family: 'Jost', sans-serif;
+    font-size: 0.78rem; font-weight: 700;
+    letter-spacing: 0.08em; cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+ 
+.lang-btn:hover { color: var(--primary); transform: translateY(-1px); }
+ 
+.lang-btn.active {
+    background: var(--primary); color: #fff;
+    box-shadow: 0 2px 8px rgba(26, 63, 255, 0.28);
+}
+ 
+/* ── Theme toggle button ─────────────────────────── */
+.theme-btn {
+    width: 36px; height: 36px;
+    display: inline-flex; align-items: center; justify-content: center;
+    border: 1.5px solid var(--border);
+    border-radius: 50%;
+    background: var(--primary-dim);
+    color: var(--text-2);
+    font-size: 0.85rem; cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease,
+                color 0.2s ease, transform 0.2s ease;
+    flex-shrink: 0;
+}
+ 
+.theme-btn:hover {
+    background: var(--primary-dim);
+    border-color: var(--primary);
+    color: var(--primary);
+    transform: rotate(15deg) translateY(-1px);
+}
+ 
+/* ── CTA ─────────────────────────────────────────── */
+.nav-cta {
+    font-size: 0.87rem; min-height: 42px;
+    padding: 10px 22px; white-space: nowrap;
+}
+ 
+/* ── Mobile button ───────────────────────────────── */
+#mobile_btn {
+    display: none; align-items: center; justify-content: center;
+    width: 44px; height: 44px; flex-shrink: 0;
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+    background: var(--primary-dim);
+    color: var(--text-2); font-size: 1rem; cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+ 
+#mobile_btn:hover {
+    background: var(--primary-dim);
+    border-color: var(--border);
+    transform: translateY(-1px);
+}
+ 
+/* ── Mobile menu ─────────────────────────────────── */
+#mobile_menu {
+    width: min(100%, 1240px); margin: 0 auto;
+    padding: 0 8%; overflow: hidden;
+    max-height: 0; visibility: hidden;
+    transition: max-height 0.35s ease, padding-bottom 0.35s ease, visibility 0.35s ease;
+}
+ 
+#mobile_menu.active {
+    max-height: 520px; padding-bottom: 18px; visibility: visible;
+}
+ 
+#mobile_nav_list {
+    list-style: none; display: flex; flex-direction: column; gap: 4px;
+    padding: 12px 10px 16px; margin-top: 6px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: var(--shadow-lg);
+}
+ 
+#mobile_nav_list .nav-item { padding: 0 6px; }
+ 
+#mobile_nav_list .nav-item a {
+    display: flex; width: 100%;
+    padding: 11px 14px; border-radius: 12px;
+}
+ 
+/* Mobile controls row: language + theme toggle */
+.mobile-controls {
+    margin-top: 12px;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 12px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 10px 16px;
+    box-shadow: 0 8px 24px rgba(10, 22, 40, 0.1);
+}
+ 
+.mobile-controls .language-switcher {
+    flex: 1; justify-content: center;
+}
+ 
+.mobile-controls .theme-btn {
+    width: 40px; height: 40px; font-size: 0.9rem;
+}
+ 
+.mobile-cta { margin-top: 12px; width: 100%; justify-content: center; display: flex; }
+ 
+/* ── Breakpoints ─────────────────────────────────── */
+@media (max-width: 1240px) {
+    #navbar { padding: 14px 6%; }
+    #mobile_menu { padding: 0 6%; }
+    #nav_list { gap: 2px; }
+    .nav-item a { font-size: 0.85rem; padding: 8px 11px; }
+    .nav-cta { padding: 10px 18px; font-size: 0.84rem; }
+    .brand-text strong { font-size: 0.95rem; }
+}
+ 
+@media (max-width: 1170px) {
+    #nav_list, .nav-actions { display: none; }
+    #mobile_btn { display: inline-flex; }
+}
+ 
+@media (max-width: 600px) {
+    #navbar { padding: 13px 5%; }
+    #mobile_menu { padding: 0 5%; }
+    .brand-text small { display: none; }
+}
