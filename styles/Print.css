@@ -1,0 +1,305 @@
+/* ═══════════════════════════════════════════════
+   PRINT STYLESHEET — CV Export
+   Clean single-column layout for PDF/print output
+═══════════════════════════════════════════════ */
+
+@media print {
+
+    /* ── Page setup ──────────────────────────────── */
+    @page {
+        size: A4;
+        margin: 18mm 16mm;
+    }
+
+    /* ── Reset & base ────────────────────────────── */
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+        box-shadow: none !important;
+    }
+
+    body {
+        font-family: 'Jost', 'Helvetica Neue', Arial, sans-serif;
+        font-size: 10pt;
+        line-height: 1.6;
+        color: #0a1628;
+        background: #fff;
+    }
+
+    /* ── Hide non-essential elements ─────────────── */
+    header,
+    footer,
+    .site-bg,
+    #banner,
+    #numbers,
+    .home-actions,
+    .social-media-buttons,
+    .contact-social,
+    .home-tags,
+    .btn-primary,
+    .btn-ghost,
+    #contact form,
+    .section-description + * { /* hides redundant sections if needed */
+        display: none !important;
+    }
+
+    /* ── Layout: full width, no max-width ────────── */
+    main, section {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* ── Hero section ────────────────────────────── */
+    #home {
+        display: block;
+        min-height: auto;
+        padding: 0 0 18pt !important;
+        border-bottom: 1.5pt solid #1a3fff;
+        margin-bottom: 18pt;
+    }
+
+    #cta {
+        max-width: 100%;
+    }
+
+    .eyebrow {
+        font-size: 7.5pt;
+        border: none;
+        background: none;
+        padding: 0;
+        color: #1a3fff;
+        margin-bottom: 6pt;
+    }
+
+    .eyebrow-dot { display: none; }
+
+    #cta .title {
+        font-size: 24pt;
+        line-height: 1.1;
+        margin-bottom: 8pt;
+        color: #0a1628;
+    }
+
+    .hero-pillars {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 4pt 16pt;
+        margin-bottom: 8pt;
+    }
+
+    .hero-pillar {
+        font-size: 8.5pt;
+        color: #344466;
+    }
+
+    #cta .description {
+        font-size: 9.5pt;
+        color: #344466;
+        max-width: 100%;
+    }
+
+    /* ── Section headers ─────────────────────────── */
+    .section-header {
+        margin-bottom: 16pt;
+        page-break-after: avoid;
+    }
+
+    .section-title {
+        font-size: 16pt;
+        color: #0a1628;
+    }
+
+    .section-title::after {
+        width: 32pt;
+        height: 2pt;
+        margin-top: 6pt;
+        background: #1a3fff;
+    }
+
+    .section-subtitle {
+        font-size: 9pt;
+        color: #344466;
+    }
+
+    .subsection-title {
+        font-size: 12pt;
+        margin-bottom: 12pt;
+    }
+
+    /* ── What I bring ────────────────────────────── */
+    #bring {
+        background: none !important;
+        border: none !important;
+        padding: 0 0 16pt !important;
+        margin-bottom: 16pt;
+        border-bottom: 0.5pt solid #dde6ff !important;
+    }
+
+    .bring-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12pt;
+    }
+
+    .bring-card {
+        background: none !important;
+        border: 0.5pt solid #dde6ff !important;
+        border-radius: 4pt;
+        padding: 10pt 10pt;
+    }
+
+    .bring-card::before { display: none; }
+
+    .bring-icon { display: none; }
+
+    .bring-card h3 {
+        font-size: 10pt;
+        margin-bottom: 6pt;
+    }
+
+    .bring-card p {
+        font-size: 8.5pt;
+        color: #344466;
+        margin-bottom: 6pt;
+    }
+
+    .bring-list { gap: 4pt; }
+    .bring-list li { font-size: 8pt; color: #5a6e99; }
+    .bring-list { border-top: 0.5pt solid #eef2ff; padding-top: 8pt; }
+
+    /* ── Career highlights ───────────────────────── */
+    .highlights-grid {
+        display: block;
+    }
+
+    .highlight-card {
+        border: 0.5pt solid #dde6ff !important;
+        border-radius: 4pt;
+        padding: 0;
+        margin-bottom: 10pt;
+        page-break-inside: avoid;
+    }
+
+    .highlight-meta {
+        padding: 8pt 10pt 0;
+    }
+
+    .highlight-title {
+        font-size: 10pt;
+        padding: 4pt 10pt 0;
+    }
+
+    .highlight-company { font-size: 9pt; }
+    .highlight-tag { font-size: 7pt; }
+
+    .highlight-body {
+        padding: 8pt 10pt 10pt;
+        gap: 8pt;
+    }
+
+    .step-label { font-size: 7pt; }
+
+    .highlight-step p {
+        font-size: 8.5pt;
+        color: #344466;
+    }
+
+    .highlight-outcome {
+        background: rgba(0, 184, 169, 0.05) !important;
+        border-left-color: #00b8a9 !important;
+    }
+
+    /* ── Experience rows ─────────────────────────── */
+    .row, .row.reverse {
+        display: block;
+        border: 0.5pt solid #dde6ff !important;
+        border-radius: 4pt;
+        padding: 10pt 12pt !important;
+        margin-bottom: 8pt;
+        page-break-inside: avoid;
+    }
+
+    .row::before { display: none; }
+
+    .row img { display: none; } /* hide images to save space */
+
+    .company-meta h4 { font-size: 12pt; }
+    .company-tag { font-size: 7.5pt; }
+
+    .current-badge { font-size: 7.5pt; }
+
+    .outcome-list li {
+        font-size: 8.5pt;
+        color: #344466;
+    }
+
+    /* ── Technical skills ────────────────────────── */
+    .skills-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10pt;
+    }
+
+    .skill-box {
+        border: 0.5pt solid #dde6ff !important;
+        border-radius: 4pt;
+        padding: 10pt;
+    }
+
+    .skill-box::before,
+    .skill-box-icon { display: none; }
+
+    .skill-box h3 { font-size: 10pt; margin-bottom: 8pt; }
+    .skill-tier-label { font-size: 7pt; }
+    .skill-item span, .skills-list li { font-size: 8.5pt; }
+    .skill-item img { width: 16px; height: 16px; }
+
+    /* ── Contact (minimal) ───────────────────────── */
+    .contact .section-header {
+        align-items: flex-start;
+    }
+    .contact .section-title::after {
+        margin-left: 0;
+    }
+
+    /* ── Finance & automation ─────────────────────── */
+    #finance, #automation, #continuousimprovement {
+        border: none !important;
+        background: none !important;
+    }
+
+    .center-image, .small-image { display: none; }
+
+    .section-description {
+        font-size: 9pt;
+        color: #344466;
+        margin: 0;
+    }
+
+    /* ── Page breaks ─────────────────────────────── */
+    #expertise  { page-break-before: always; }
+    #highlights { page-break-before: always; }
+    #technicalskills { page-break-before: always; }
+
+    /* ── Reveal: always show for print ───────────── */
+    .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    /* ── Links: show URL ─────────────────────────── */
+    a[href^="http"]::after {
+        content: " (" attr(href) ")";
+        font-size: 7.5pt;
+        color: #7a8fb5;
+    }
+
+    /* Suppress for nav and social links */
+    .nav-item a::after,
+    .social-media-buttons a::after,
+    .contact-social a::after,
+    .btn-primary::after,
+    .btn-ghost::after { content: none; }
+}
