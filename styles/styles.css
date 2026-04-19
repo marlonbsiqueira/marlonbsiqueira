@@ -635,6 +635,99 @@ footer { position: relative; z-index: 1; }
 }
 
 /* ═══════════════════════════════════════════════
+   MENSA CREDENTIAL BLOCK
+═══════════════════════════════════════════════ */
+.mensa-block {
+    margin: 52px 0;
+    background: linear-gradient(135deg, rgba(26,63,255,0.04) 0%, rgba(191,160,90,0.06) 100%);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+[data-theme="dark"] .mensa-block {
+    background: linear-gradient(135deg, rgba(77,115,255,0.07) 0%, rgba(191,160,90,0.07) 100%);
+}
+.mensa-inner {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    align-items: center;
+    gap: 48px;
+    padding: 40px 48px;
+}
+.mensa-cert {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.mensa-cert img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.mensa-cert img:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-lg);
+}
+.mensa-text {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.mensa-eyebrow {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+}
+.mensa-title {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 600;
+    font-style: italic;
+    color: var(--text);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+}
+.mensa-desc {
+    font-size: 0.95rem;
+    color: var(--text-2);
+    line-height: 1.8;
+}
+.mensa-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 16px;
+    border-radius: 999px;
+    background: rgba(191, 160, 90, 0.1);
+    border: 1px solid rgba(191, 160, 90, 0.28);
+    width: fit-content;
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 0.04em;
+}
+.mensa-badge i { font-size: 0.8rem; }
+@media (max-width: 900px) {
+    .mensa-inner { grid-template-columns: 1fr; gap: 28px; padding: 32px 28px; text-align: center; }
+    .mensa-cert { justify-content: center; }
+    .mensa-cert img { max-width: 280px; }
+    .mensa-badge { align-self: center; }
+}
+@media (max-width: 480px) {
+    .mensa-inner { padding: 24px 20px; }
+    .mensa-title { font-size: 1.6rem; }
+    .mensa-cert img { max-width: 220px; }
+}
+
+/* ═══════════════════════════════════════════════
    DASHBOARDS SECTION
 ═══════════════════════════════════════════════ */
 .dashboard-video-wrap {
