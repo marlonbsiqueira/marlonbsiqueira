@@ -435,6 +435,13 @@ input:focus-visible, textarea:focus-visible {
 /* ── Section backgrounds ────────────────────── */
 #expertise  { background: var(--bg); }
 #automation { background: var(--bg); }
+#dashboards {
+    background: var(--bg-2);
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+    width: 100%; max-width: 100%;
+}
+#dashboards > * { max-width: var(--container); margin-left: auto; margin-right: auto; }
 #continuousimprovement {
     background: var(--bg-3);
     border-top: 1px solid var(--border-light);
@@ -628,138 +635,63 @@ footer { position: relative; z-index: 1; }
 }
 
 /* ═══════════════════════════════════════════════
-   VIDEO BANNER
-   Replaces static hero image with autoplay video
+   DASHBOARDS SECTION
 ═══════════════════════════════════════════════ */
-#banner video {
-    width: min(100%, 760px);
-    max-width: 760px;
-    height: auto;
-    object-fit: contain;
-    position: relative;
-    z-index: 1;
-    border-radius: 20px;
-    transition: transform 0.4s ease, filter 0.4s ease !important;
-    filter: drop-shadow(0 18px 44px rgba(26, 63, 255, 0.13));
-}
-#banner video:hover {
-    transform: translateY(-6px) scale(1.01);
-    filter: drop-shadow(0 26px 56px rgba(26, 63, 255, 0.2));
-}
-@media (max-width: 1200px) { #banner video { width: min(100%, 640px); max-width: 640px; } }
-@media (max-width: 1170px) { #banner video { width: min(100%, 520px); max-width: 520px; } }
-@media (max-width: 768px)  { #banner video { width: min(100%, 360px); max-width: 360px; } }
-@media (max-width: 480px)  { #banner video { width: min(100%, 310px); max-width: 310px; } }
-
-/* ═══════════════════════════════════════════════
-   MENSA CREDENTIAL BLOCK
-═══════════════════════════════════════════════ */
-.mensa-block {
-    margin: 52px 0;
-    background: linear-gradient(135deg, rgba(26,63,255,0.04) 0%, rgba(191,160,90,0.06) 100%);
-    border: 1px solid var(--border);
+.dashboard-video-wrap {
+    width: min(100%, 700px);
+    margin: 0 auto 48px;
     border-radius: var(--radius);
     overflow: hidden;
-}
-[data-theme="dark"] .mensa-block {
-    background: linear-gradient(135deg, rgba(77,115,255,0.07) 0%, rgba(191,160,90,0.07) 100%);
-}
-.mensa-inner {
-    display: grid;
-    grid-template-columns: 340px 1fr;
-    align-items: center;
-    gap: 48px;
-    padding: 40px 48px;
-}
-.mensa-cert {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
-.mensa-cert img {
-    width: 100%;
-    max-width: 320px;
-    height: auto;
-    border-radius: 12px;
     box-shadow: var(--shadow-md);
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    display: block;
 }
-.mensa-cert img:hover {
-    transform: scale(1.02);
+.dashboard-video-wrap video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius);
+    transition: transform 0.4s ease, box-shadow 0.4s ease !important;
+}
+.dashboard-video-wrap:hover video {
+    transform: scale(1.01);
     box-shadow: var(--shadow-lg);
 }
-.mensa-text {
+.dash-skills {
     display: flex;
-    flex-direction: column;
-    gap: 14px;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 40px;
+    max-width: 860px;
+    margin-left: auto;
+    margin-right: auto;
 }
-.mensa-eyebrow {
-    font-family: var(--font-body);
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--gold);
-}
-.mensa-title {
-    font-family: var(--font-display);
-    font-size: 2rem;
-    font-weight: 600;
-    font-style: italic;
-    color: var(--text);
-    line-height: 1.1;
-    letter-spacing: -0.01em;
-}
-.mensa-desc {
-    font-size: 0.95rem;
-    color: var(--text-2);
-    line-height: 1.8;
-}
-.mensa-badge {
+.dash-skill-item {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 7px 16px;
+    padding: 9px 18px;
     border-radius: 999px;
-    background: rgba(191, 160, 90, 0.1);
-    border: 1px solid rgba(191, 160, 90, 0.28);
-    width: fit-content;
+    background: var(--primary-dim);
+    border: 1px solid var(--border);
     font-family: var(--font-body);
-    font-size: 0.82rem;
-    font-weight: 600;
-    color: var(--gold);
-    letter-spacing: 0.04em;
-}
-.mensa-badge i { font-size: 0.8rem; }
-
-@media (max-width: 900px) {
-    .mensa-inner {
-        grid-template-columns: 1fr;
-        gap: 28px;
-        padding: 32px 28px;
-        text-align: center;
-    }
-    .mensa-cert { justify-content: center; }
-    .mensa-cert img { max-width: 280px; }
-    .mensa-badge { align-self: center; }
-    .mensa-eyebrow { text-align: center; }
-}
-@media (max-width: 480px) {
-    .mensa-inner { padding: 24px 20px; }
-    .mensa-title { font-size: 1.6rem; }
-    .mensa-cert img { max-width: 220px; }
-}
-
-/* ═══════════════════════════════════════════════
-   CV DOWNLOAD BUTTON (nav)
-═══════════════════════════════════════════════ */
-.nav-cv {
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
     font-size: 0.84rem;
-    min-height: 38px;
-    padding: 8px 16px;
-    white-space: nowrap;
+    font-weight: 600;
+    color: var(--primary);
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+.dash-skill-item:hover {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+.dash-skill-item i {
+    font-size: 0.8rem;
+    flex-shrink: 0;
+}
+@media (max-width: 768px) {
+    .dashboard-video-wrap { border-radius: var(--radius-sm); }
+    .dash-skills { gap: 8px; }
+    .dash-skill-item { font-size: 0.78rem; padding: 7px 14px; }
 }
