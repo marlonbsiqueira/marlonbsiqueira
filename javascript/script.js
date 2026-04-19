@@ -157,6 +157,11 @@ document.addEventListener("DOMContentLoaded", () => {
             dash_skill_5:  "Multi-Entity Reporting — 15+ EU Entities",
             dash_skill_6:  "SOX-Compliant & Audit-Ready Reporting",
 
+            mensa_eyebrow: "High IQ Society · Top 2% · Member since 2014",
+            mensa_title:   "Mensa Brasil Member",
+            mensa_desc:    "Admitted to Mensa Brasil in May 2014 after scoring at the 98th percentile or above on a standardised intelligence test validated by the Conselho Federal de Psicologia. Member number MB 1129. Mensa is the largest high-IQ society in the world, open exclusively to individuals who score in the top 2% of the population.",
+            mensa_badge:   "98th Percentile · MB 1129",
+
             ci_title:    "Continuous Improvement",
             ci_subtitle: "Lean thinking applied to real operations — delivering measurable, lasting change.",
             ci_text:     "As a certified Lean Six Sigma Black Belt, I have led improvement initiatives across manufacturing, logistics, finance and shared services — delivering measurable reductions in cycle time, rework and operational cost. My approach combines structured DMAIC methodology with hands-on workshop facilitation: from shop-floor Kaizen events at Vale's iron ore sites to cross-functional process redesigns at Stellantis. I apply Value Stream Mapping, 5S, Pareto analysis, Ishikawa diagrams, PDCA cycles and Balanced Scorecard to diagnose root causes and sustain improvements beyond the project.",
@@ -296,7 +301,10 @@ document.addEventListener("DOMContentLoaded", () => {
             dash_skill_5:  "Reporte Multi-Entidade — 15+ Entidades EU",
             dash_skill_6:  "Reporte SOX-Compliant & Pronto para Auditoria",
 
-            ci_title:    "Melhoria Contínua",
+            mensa_eyebrow: "Sociedade de Alto QI · Top 2% · Membro desde 2014",
+            mensa_title:   "Membro Mensa Brasil",
+            mensa_desc:    "Admitido na Mensa Brasil em maio de 2014, após obter resultado no percentil 98 ou superior num teste de inteligência padronizado, validado pelo Conselho Federal de Psicologia. Número de membro MB 1129. A Mensa é a maior sociedade de alto QI do mundo, aberta exclusivamente a indivíduos que se situam nos 2% superiores da população.",
+            mensa_badge:   "Percentil 98 · MB 1129",    "Melhoria Contínua",
             ci_subtitle: "Pensamento Lean aplicado a operações reais — gerando mudanças mensuráveis e duradouras.",
             ci_text:     "Como Black Belt certificado em Lean Six Sigma, liderei iniciativas de melhoria em produção, logística, finanças e serviços partilhados — entregando reduções mensuráveis no tempo de ciclo, retrabalho e custo operacional. A minha abordagem combina metodologia DMAIC estruturada com facilitação de workshops práticos: desde eventos Kaizen no chão de fábrica da Vale até redesenhos cross-funcionais na Stellantis. Aplico Value Stream Mapping, 5S, Pareto, Ishikawa, PDCA e Balanced Scorecard para diagnosticar causas raiz e sustentar melhorias além do projeto.",
 
