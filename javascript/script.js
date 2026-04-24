@@ -51,15 +51,15 @@ document.addEventListener("DOMContentLoaded", () => {
     ══════════════════════════════════════════════ */
     const translations = {
         en: {
-            brand_subtitle:    "Finance Transformation Specialist",
+            brand_subtitle:    "Finance Transformation Lead",
             nav_home:          "Home",
             nav_highlights:    "Highlights",
             nav_experience:    "Experience",
             nav_deliver:       "Capabilities",
             nav_skills:        "Skills",
-            nav_cta:           "Get in Touch",
+            nav_cta:           "Discuss a Transformation",
 
-            hero_eyebrow:      "Finance Transformation Specialist · SAP S/4HANA · Automation · AI",
+            hero_eyebrow:      "Finance Transformation Lead · SAP S/4HANA · Automation · AI",
             hero_line1:        "I Architect Finance Transformation",
             hero_accent1:      "That Scales, Governs and Delivers.",
             hero_pillar1:      "SAP S/4HANA Finance Transformation",
@@ -190,20 +190,20 @@ document.addEventListener("DOMContentLoaded", () => {
             form_btn:         "Send Message",
             form_note:        "I typically respond within one business day.",
 
-            footer_tagline: "Finance Transformation · SAP S/4HANA · Automation · AI",
+            footer_tagline: "Finance Transformation Lead · SAP S/4HANA · Automation · AI",
             footer_copy:    "© 2026 · All rights reserved"
         },
 
         pt: {
-            brand_subtitle:    "Especialista em Transformação Financeira",
+            brand_subtitle:    "Finance Transformation Lead",
             nav_home:          "Início",
             nav_highlights:    "Destaques",
             nav_experience:    "Experiência",
             nav_deliver:       "Competências",
             nav_skills:        "Competências Técnicas",
-            nav_cta:           "Entrar em Contacto",
+            nav_cta:           "Vamos Falar",
 
-            hero_eyebrow:      "Especialista em Transformação Financeira · SAP S/4HANA · Automação · IA",
+            hero_eyebrow:      "Finance Transformation Lead · SAP S/4HANA · Automação · IA",
             hero_line1:        "Construo Transformações Financeiras",
             hero_accent1:      "que Escalam, Governam e Entregam.",
             hero_pillar1:      "Transformação SAP S/4HANA",
@@ -334,7 +334,7 @@ document.addEventListener("DOMContentLoaded", () => {
             form_btn:         "Enviar Mensagem",
             form_note:        "Respondo normalmente dentro de um dia útil.",
 
-            footer_tagline: "Transformação Financeira · SAP S/4HANA · Automação · IA",
+            footer_tagline: "Finance Transformation Lead · SAP S/4HANA · Automação · IA",
             footer_copy:    "© 2026 · Todos os direitos reservados"
         }
     };
@@ -372,18 +372,20 @@ document.addEventListener("DOMContentLoaded", () => {
         const target   = parseInt(el.dataset.target, 10);
         const prefix   = el.dataset.prefix || "";
         const suffix   = el.dataset.suffix || "";
-        const duration = 1600;
+        const duration = 1200;
         const reduced  = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
         if (reduced) { el.textContent = prefix + target.toLocaleString() + suffix; return; }
+        const startVal = Math.round(target * 0.6);
         const start = performance.now();
         const tick = (now) => {
             const elapsed  = now - start;
             const progress = Math.min(elapsed / duration, 1);
             const eased    = easeOutQuart(progress);
-            const value    = Math.round(eased * target);
+            const value    = Math.round(startVal + eased * (target - startVal));
             el.textContent = prefix + value.toLocaleString() + suffix;
             if (progress < 1) requestAnimationFrame(tick);
         };
+        el.textContent = prefix + startVal.toLocaleString() + suffix;
         requestAnimationFrame(tick);
     };
     const numbersSection = document.getElementById("numbers");
