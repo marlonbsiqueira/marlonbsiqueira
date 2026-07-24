@@ -190,6 +190,7 @@ document.addEventListener("DOMContentLoaded", () => {
             skills_cert:     "Certifications",
             tier_primary:    "Expert",
             tier_secondary:  "Proficient",
+            tier_applied:    "Applied",
             cert_1: "Lean Six Sigma Black Belt",
             cert_2: "Automation Anywhere RPA Certification",
             cert_3: "Power BI Data Analytics",
@@ -319,7 +320,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             dash_title:    "Analytics & Dashboards",
             dash_subtitle: "Transformar dados em inteligência pronta para decisão — dashboards Power BI executivos construídos para ambientes multinacionais reais.",
-            dash_text:     "Concebo e construo dashboards Power BI executivos que transformam dados financeiros e operacionais complexos em inteligência clara e acionável. A minha prática abrange toda a cadeia de analytics — desde a modelação de dados e engenharia de medidas DAX até à hierarquia visual e UX para liderança sénior. A trabalhar em mais de 15 entidades europeias na Stellantis, construí mais de 15 dashboards executivos com DAX avançado que melhoraram a visibilidade de KPIs em 40–50% para 70+ líderes seniores e contribuíram diretamente para a redução do fecho financeiro mensal de 8 para 6 dias. O meu trabalho de dashboards cobre reporte de performance financeira (R2R, P2P, OTC), governação de KPIs de processo, análise de aging de contas a pagar e a receber, pipelines de extração e modelação de dados SAP, e acompanhamento de eficiência operacional em ambientes SSC/GBS multinacionais.",
+            dash_text:     "Concebo e construo dashboards Power BI executivos que transformam dados financeiros e operacionais complexos em inteligência clara e acionável. A minha prática abrange toda a cadeia de analytics — desde a modelação de dados e engenharia de medidas DAX até à hierarquia visual e UX para liderança sénior. A trabalhar em mais de 15 entidades europeias na Stellantis, construí mais de 15 dashboards executivos com DAX avançado que melhoraram a visibilidade de KPIs em 40–50% para 70+ líderes seniores e contribuíram diretamente para a redução do fecho financeiro mensal de 8 para 6 dias. O meu trabalho de dashboards cobre reporte de performance financeira (R2R, P2P, OTC), governação de KPIs de processo, análise de aging de contas a pagar e a receber, pipelines de extração e modelação de dados SAP, e acompanhamento de eficiência operacional em ambientes SSC/GBS multinacionais. Cada dashboard que entrego é construído com governação em mente — estruturado, auditável e concebido para substituir o reporte manual, não para o complementar.",
             dash_skill_1:  "Power BI & DAX Avançado",
             dash_skill_2:  "Modelação de Dados & Visualização",
             dash_skill_3:  "Extração de Dados SAP & Pipelines",
@@ -350,6 +351,7 @@ document.addEventListener("DOMContentLoaded", () => {
             skills_cert:     "Certificações",
             tier_primary:    "Expert",
             tier_secondary:  "Proficiente",
+            tier_applied:    "Aplicado",
             cert_1: "Lean Six Sigma Black Belt",
             cert_2: "Certificação RPA Automation Anywhere",
             cert_3: "Power BI Data Analytics",
@@ -370,6 +372,19 @@ document.addEventListener("DOMContentLoaded", () => {
             footer_copy:    "© 2026 · Todos os direitos reservados"
         }
     };
+
+    /* ── EN copy lives in the HTML markup — capture it at load so the
+       dictionary can never drift from the page. The en object above is
+       kept only as a fallback; the DOM values below always win. ─────── */
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+        translations.en[el.dataset.i18n] = el.textContent.trim();
+    });
+    document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+        translations.en[el.dataset.i18nPlaceholder] = el.getAttribute("placeholder");
+    });
+    document.querySelectorAll("[data-i18n-alt]").forEach(el => {
+        translations.en[el.dataset.i18nAlt] = el.getAttribute("alt");
+    });
 
     /* ── i18n engine ──────────────────────────────── */
     const applyTranslations = (lang) => {
