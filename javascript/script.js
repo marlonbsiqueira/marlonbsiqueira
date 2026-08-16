@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-
     /* ── References ─────────────────────────────── */
     const htmlEl            = document.documentElement;
     const header            = document.getElementById("header");
@@ -17,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const themeIcon         = document.getElementById("theme-icon");
     const themeIconMobile   = document.getElementById("theme-icon-mobile");
     const numberValues      = document.querySelectorAll(".number-value");
-
     /* ══════════════════════════════════════════════
        DARK MODE
     ══════════════════════════════════════════════ */
@@ -45,7 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
     themeToggle?.addEventListener("click", toggleTheme);
     themeToggleMobile?.addEventListener("click", toggleTheme);
     applyTheme(getSavedTheme() || getSystemTheme());
-
     /* ══════════════════════════════════════════════
        TRANSLATIONS
     ══════════════════════════════════════════════ */
@@ -58,7 +55,6 @@ document.addEventListener("DOMContentLoaded", () => {
             nav_deliver:       "Capabilities",
             nav_skills:        "Skills",
             nav_cta:           "Discuss a Transformation",
-
             hero_available:    "Open to new opportunities",
             hero_eyebrow:      "Finance Transformation Lead · SAP S/4HANA · Automation · AI",
             hero_line1:        "I Architect Finance Transformation",
@@ -69,13 +65,11 @@ document.addEventListener("DOMContentLoaded", () => {
             hero_description:  "12+ years of international experience across Europe and Latin America — delivering SAP S/4HANA transformation, intelligent automation and advanced analytics across multinational SSC/GBS environments. I translate operational complexity into scalable, governed solutions that drive measurable business impact.",
             hero_cta_primary:  "View Impact",
             hero_cta_secondary:"Full Experience",
-
             num_savings:       "Productivity savings (EUR)",
             num_fte:           "Direct efficiency contribution",
             num_initiatives:   "Transformation initiatives",
             num_leaders:       "Senior leaders served weekly",
             num_entities:      "European entities transformed",
-
             deliver_title:   "Core Capabilities",
             deliver_subtitle:"Three capabilities that compound when integrated — finance depth, process discipline and hands-on technical execution.",
             bring_1_title: "Financial Rigour",
@@ -85,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
             bring_1_li3:   "Board-level KPI design & reporting governance",
             bring_1_li4:   "Cost intelligence & variance analytics",
             bring_2_title: "Operational Transformation",
-            bring_2_text:  "Lean Six Sigma Black Belt with a track record of transforming finance and operational processes from diagnostic to deployment. I do not run projects — I eliminate waste permanently, reduce cycle times structurally, and build the continuous improvement discipline into teams so they sustain performance long after delivery.",
+            bring_2_text:  "Lean Six Sigma Green Belt with a track record of transforming finance and operational processes from diagnostic to deployment. I do not run projects — I eliminate waste permanently, reduce cycle times structurally, and build the continuous improvement discipline into teams so they sustain performance long after delivery.",
             bring_2_li1:   "DMAIC & Value Stream Mapping",
             bring_2_li2:   "Cross-functional process redesign at SSC/GBS scale",
             bring_2_li3:   "Kaizen facilitation & structured problem-solving",
@@ -96,7 +90,6 @@ document.addEventListener("DOMContentLoaded", () => {
             bring_3_li2:   "Power BI dashboards & advanced DAX modelling",
             bring_3_li3:   "SAP S/4HANA transformation — UAT & post-go-live",
             bring_3_li4:   "VBA, Python, Power Automate, SQL — expert execution",
-
             hl_title:      "Career Highlights",
             hl_subtitle:   "Three initiatives that define the depth and scale of my transformation work.",
             hl_tag_1:      "Automation · Multi-country",
@@ -117,12 +110,10 @@ document.addEventListener("DOMContentLoaded", () => {
             hl_3_challenge:"Finance teams across 15+ European entities were spending disproportionate time on manual reconciliations, data entry and report compilation — reducing capacity for analysis and decision support.",
             hl_3_action:   "Architected and delivered 20+ automation solutions (RPA design, VBA, Power Platform) across R2R, P2P and OTC functions. Integrated with SAP S/4HANA. Built 15+ Power BI dashboards with advanced DAX for real-time leadership visibility.",
             hl_3_outcome:  "~9 FTE personal efficiency contribution. 35–50% reduction in manual workload. €200K+ cumulative productivity savings. Month-end close accelerated from 8 to 6 days. 70+ senior leaders now receive real-time dashboards weekly.",
-
             exp_title:    "Education & Experience",
             exp_subtitle: "A track record built across industries, continents and complex multinational environments.",
             exp_sub:      "Professional Experience",
             edu_img_alt:  "Education and academic background",
-
             stellantis_tag:"Automotive · SSC/GBS · Europe",
             stellantis_li1:"Driving finance transformation across 15+ European entities within Stellantis' SSC/GBS — combining SAP S/4HANA process optimisation, intelligent automation and advanced analytics to deliver €200K+ in productivity savings",
             stellantis_li2:"Architected and delivered 20+ automation solutions (RPA, VBA, Power Platform) — ~9 FTE personal efficiency contribution; built 15+ Power BI dashboards improving KPI visibility 40–50% for 70+ senior leaders",
@@ -146,7 +137,6 @@ document.addEventListener("DOMContentLoaded", () => {
             vale_tag:      "Mining & Operations · Brazil",
             vale_li1:      "Supported Lean Six Sigma training across iron ore extraction sites covering Operations, Maintenance, Logistics and Administration — applying Kaizen, PDCA, 5S, Pareto and Ishikawa with frontline and supervisory teams",
             vale_li2:      "Embedded structured problem-solving methods into daily operational routines — reducing recurring waste and building the continuous improvement foundation for all subsequent transformation work",
-
             auto_title:    "Automation",
             auto_subtitle: "Eliminating manual work at scale — so finance teams focus on what creates value.",
             auto_text:     "My automation practice is built on one principle: never automate a broken process. Before a single workflow is deployed, I map, challenge and optimise — ensuring that what gets automated is already working correctly. I specialise in identifying repetitive, low-value tasks and transforming them into intelligent workflows using the right tool for each context: RPA (Automation Anywhere, Blue Prism), Microsoft Power Platform, Python, VBA and AI-assisted design. From finance reconciliations to cross-system data pipelines, I have delivered automation solutions that save thousands of hours annually — with full governance and audit traceability built in from the start.",
@@ -156,7 +146,6 @@ document.addEventListener("DOMContentLoaded", () => {
             auto_skill_4:  "AI-Assisted Workflow Design",
             auto_skill_5:  "GDPR-Compliant Governance & Audit Traceability",
             auto_skill_6:  "End-to-End Finance Process Automation",
-
             dash_title:    "Analytics & Dashboards",
             dash_subtitle: "Turning raw data into decision-ready intelligence — executive Power BI dashboards built for real multinational environments.",
             dash_text:     "I design and build executive Power BI dashboards that transform complex financial and operational data into clear, actionable intelligence. My practice spans the full analytics stack — from data modelling and DAX measure engineering to visual hierarchy and senior leadership UX. Working across 15+ European entities at Stellantis, I built 15+ executive dashboards with advanced DAX that improved KPI visibility by 40–50% for 70+ senior leaders and directly contributed to reducing month-end financial close from 8 to 6 days. My dashboard work covers financial performance reporting (R2R, P2P, OTC), process KPI governance, accounts payable and receivable ageing analysis, SAP data extraction and modelling pipelines, and operational efficiency tracking across multinational SSC/GBS environments. Every dashboard I deliver is built with governance in mind — structured, auditable, and designed to replace manual reporting rather than supplement it.",
@@ -166,22 +155,19 @@ document.addEventListener("DOMContentLoaded", () => {
             dash_skill_4:  "Executive KPI Design — 70+ Senior Leaders",
             dash_skill_5:  "Multi-Entity Reporting — 15+ EU Entities",
             dash_skill_6:  "SOX-Compliant & Audit-Ready Reporting",
-
             mensa_eyebrow: "High IQ Society · Top 2% · Member since 2014",
             mensa_title:   "Mensa Brasil Member",
             mensa_desc:    "Admitted to Mensa Brasil in May 2014 after scoring at the 98th percentile or above on a standardised intelligence test validated by the Conselho Federal de Psicologia. Member number MB 1129. Mensa is the largest high-IQ society in the world, open exclusively to individuals who score in the top 2% of the population.",
             mensa_badge:   "98th Percentile · MB 1129",
-
             ci_title:    "Continuous Improvement",
             ci_subtitle: "Lean thinking applied to real operations — delivering measurable, lasting change.",
-            ci_text:     "As a certified Lean Six Sigma Black Belt, I have led improvement initiatives across manufacturing, logistics, finance and shared services — delivering measurable reductions in cycle time, rework and operational cost. My approach combines structured DMAIC methodology with hands-on workshop facilitation: from shop-floor Kaizen events at Vale's iron ore sites to cross-functional process redesigns at Stellantis. I apply Value Stream Mapping, 5S, Pareto analysis, Ishikawa diagrams, PDCA cycles and Balanced Scorecard to diagnose root causes and sustain improvements beyond the project.",
-            ci_skill_1:  "Lean Six Sigma Black Belt (LSSBB)",
+            ci_text:     "As a certified Lean Six Sigma Green Belt, I have led improvement initiatives across manufacturing, logistics, finance and shared services — delivering measurable reductions in cycle time, rework and operational cost. My approach combines structured DMAIC methodology with hands-on workshop facilitation: from shop-floor Kaizen events at Vale's iron ore sites to cross-functional process redesigns at Stellantis. I apply Value Stream Mapping, 5S, Pareto analysis, Ishikawa diagrams, PDCA cycles and Balanced Scorecard to diagnose root causes and sustain improvements beyond the project.",
+            ci_skill_1:  "Lean Six Sigma Green Belt (LSSGB)",
             ci_skill_2:  "DMAIC & Root Cause Analysis",
             ci_skill_3:  "Value Stream Mapping & Process Redesign",
             ci_skill_4:  "Kaizen · 5S · PDCA",
             ci_skill_5:  "Pareto & Ishikawa Analysis",
             ci_skill_6:  "Balanced Scorecard & KPI Governance",
-
             skills_title:    "Technical Skills",
             skills_subtitle: "The tools that power the transformation.",
             skills_lang:     "Programming Languages",
@@ -191,13 +177,12 @@ document.addEventListener("DOMContentLoaded", () => {
             tier_primary:    "Expert",
             tier_secondary:  "Proficient",
             tier_applied:    "Applied",
-            cert_1: "Lean Six Sigma Black Belt",
+            cert_1: "Lean Six Sigma Green Belt",
             cert_2: "Automation Anywhere RPA Certification",
             cert_3: "Power BI Data Analytics",
             cert_4: "SAP Financial Processes",
             cert_5: "Finance & Quantitative Modeling for Analysts",
             cert_6: "Artificial Intelligence for Business",
-
             contact_title:    "Let's Connect",
             contact_subtitle: "Always open to meaningful professional conversations — whether it's about finance transformation, analytics, or knowledge sharing.",
             form_name_label:  "Your Name",
@@ -206,11 +191,9 @@ document.addEventListener("DOMContentLoaded", () => {
             form_message:     "Feel free to share what's on your mind",
             form_btn:         "Send Message",
             form_note:        "I typically respond within one business day.",
-
             footer_tagline: "Finance Transformation Lead · SAP S/4HANA · Automation · AI",
             footer_copy:    "© 2026 · All rights reserved"
         },
-
         pt: {
             brand_subtitle:    "Finance Transformation Lead",
             nav_home:          "Início",
@@ -219,7 +202,6 @@ document.addEventListener("DOMContentLoaded", () => {
             nav_deliver:       "Competências",
             nav_skills:        "Competências Técnicas",
             nav_cta:           "Vamos Falar",
-
             hero_available:    "Disponível para novas oportunidades",
             hero_eyebrow:      "Finance Transformation Lead · SAP S/4HANA · Automação · IA",
             hero_line1:        "Construo Transformações Financeiras",
@@ -230,13 +212,11 @@ document.addEventListener("DOMContentLoaded", () => {
             hero_description:  "12+ anos de experiência internacional na Europa e América Latina — entregando transformação SAP S/4HANA, automação inteligente e analytics avançado em ambientes multinacionais de SSC/GBS. Traduzo complexidade operacional em soluções escaláveis e governadas que geram impacto mensurável.",
             hero_cta_primary:  "Ver Impacto",
             hero_cta_secondary:"Experiência Completa",
-
             num_savings:       "Poupanças em produtividade (EUR)",
             num_fte:           "Contribuição direta em eficiência",
             num_initiatives:   "Iniciativas de transformação",
             num_leaders:       "Líderes seniores servidos semanalmente",
             num_entities:      "Entidades europeias transformadas",
-
             deliver_title:   "Competências Principais",
             deliver_subtitle:"Três competências que se multiplicam quando integradas — profundidade financeira, disciplina de processo e execução técnica prática.",
             bring_1_title: "Rigor Financeiro",
@@ -246,7 +226,7 @@ document.addEventListener("DOMContentLoaded", () => {
             bring_1_li3:   "Design de KPIs e governação de reporte para administração",
             bring_1_li4:   "Inteligência de custos e análise de variações",
             bring_2_title: "Transformação Operacional",
-            bring_2_text:  "Black Belt Lean Six Sigma com historial comprovado de transformação de processos financeiros e operacionais do diagnóstico à implementação. Não giro projetos — elimino desperdícios de forma permanente, reduzo tempos de ciclo estruturalmente e incorporo a disciplina de melhoria contínua nas equipas para que mantenham a performance após a minha saída.",
+            bring_2_text:  "Green Belt Lean Six Sigma com historial comprovado de transformação de processos financeiros e operacionais do diagnóstico à implementação. Não giro projetos — elimino desperdícios de forma permanente, reduzo tempos de ciclo estruturalmente e incorporo a disciplina de melhoria contínua nas equipas para que mantenham a performance após a minha saída.",
             bring_2_li1:   "DMAIC & Value Stream Mapping",
             bring_2_li2:   "Redesenho cross-funcional de processos em escala SSC/GBS",
             bring_2_li3:   "Facilitação de Kaizen e resolução estruturada de problemas",
@@ -257,7 +237,6 @@ document.addEventListener("DOMContentLoaded", () => {
             bring_3_li2:   "Dashboards Power BI & modelação DAX avançada",
             bring_3_li3:   "Transformação SAP S/4HANA — UAT & pós-go-live",
             bring_3_li4:   "VBA, Python, Power Automate, SQL — execução expert",
-
             hl_title:      "Destaques de Carreira",
             hl_subtitle:   "Três iniciativas que definem a profundidade e escala do meu trabalho de transformação.",
             hl_tag_1:      "Automação · Multi-país",
@@ -278,12 +257,10 @@ document.addEventListener("DOMContentLoaded", () => {
             hl_3_challenge:"Equipas financeiras em mais de 15 entidades europeias despendiam tempo desproporcional em reconciliações manuais, introdução de dados e compilação de relatórios — reduzindo capacidade para análise e suporte à decisão.",
             hl_3_action:   "Arquitectei e entreguei mais de 20 soluções de automação (design RPA, VBA, Power Platform) nas funções R2R, P2P e OTC. Integrado com SAP S/4HANA. Construí 15+ dashboards Power BI com DAX avançado para visibilidade em tempo real.",
             hl_3_outcome:  "~9 FTE de contribuição pessoal em eficiência. Redução de 35–50% na carga de trabalho manual. Poupanças acumuladas de +200K€. Fecho financeiro acelerado de 8 para 6 dias. 70+ líderes seniores recebem dashboards em tempo real semanalmente.",
-
             exp_title:    "Formação & Experiência",
             exp_subtitle: "Um percurso construído em diferentes setores, continentes e ambientes multinacionais complexos.",
             exp_sub:      "Experiência Profissional",
             edu_img_alt:  "Formação académica",
-
             stellantis_tag:"Automóvel · SSC/GBS · Europa",
             stellantis_li1:"A liderar transformação financeira em mais de 15 entidades europeias no SSC/GBS da Stellantis — combinando otimização de processos SAP S/4HANA, automação inteligente e analytics avançado para gerar +200K€ em poupanças de produtividade",
             stellantis_li2:"Arquitectei e entreguei 20+ soluções de automação (RPA, VBA, Power Platform) — ~9 FTE de contribuição pessoal em eficiência; construí 15+ dashboards Power BI melhorando visibilidade de KPIs em 40–50% para 70+ líderes seniores",
@@ -307,7 +284,6 @@ document.addEventListener("DOMContentLoaded", () => {
             vale_tag:      "Mineração & Operações · Brasil",
             vale_li1:      "Apoiou formação Lean Six Sigma em minas de extração de minério de ferro cobrindo Operações, Manutenção, Logística e Administração — aplicando Kaizen, PDCA, 5S, Pareto e Ishikawa com equipas de primeira linha e supervisão",
             vale_li2:      "Incorporou métodos de resolução estruturada de problemas nas rotinas operacionais diárias — reduzindo desperdícios recorrentes e construindo a base de melhoria contínua para todo o trabalho de transformação subsequente",
-
             auto_title:    "Automação",
             auto_subtitle: "Eliminando trabalho manual em escala — para que as equipas financeiras se foquem no que cria valor.",
             auto_text:     "A minha prática de automação assenta num princípio: nunca automatizar um processo com problemas. Antes de qualquer fluxo ser implementado, mapeio, questiono e otimizo — garantindo que o que vai ser automatizado já funciona corretamente. Especializo-me em identificar tarefas repetitivas e de baixo valor e transformá-las em fluxos inteligentes com a ferramenta certa para cada contexto: RPA (Automation Anywhere, Blue Prism), Microsoft Power Platform, Python, VBA e design assistido por IA. Das reconciliações financeiras aos pipelines de dados entre sistemas, entreguei soluções de automação que poupam milhares de horas anuais — com governação total e rastreabilidade para auditoria incorporadas desde o início.",
@@ -317,7 +293,6 @@ document.addEventListener("DOMContentLoaded", () => {
             auto_skill_4:  "Design de Fluxos Assistido por IA",
             auto_skill_5:  "Governação GDPR-Compliant & Rastreabilidade para Auditoria",
             auto_skill_6:  "Automação End-to-End de Processos Financeiros",
-
             dash_title:    "Analytics & Dashboards",
             dash_subtitle: "Transformar dados em inteligência pronta para decisão — dashboards Power BI executivos construídos para ambientes multinacionais reais.",
             dash_text:     "Concebo e construo dashboards Power BI executivos que transformam dados financeiros e operacionais complexos em inteligência clara e acionável. A minha prática abrange toda a cadeia de analytics — desde a modelação de dados e engenharia de medidas DAX até à hierarquia visual e UX para liderança sénior. A trabalhar em mais de 15 entidades europeias na Stellantis, construí mais de 15 dashboards executivos com DAX avançado que melhoraram a visibilidade de KPIs em 40–50% para 70+ líderes seniores e contribuíram diretamente para a redução do fecho financeiro mensal de 8 para 6 dias. O meu trabalho de dashboards cobre reporte de performance financeira (R2R, P2P, OTC), governação de KPIs de processo, análise de aging de contas a pagar e a receber, pipelines de extração e modelação de dados SAP, e acompanhamento de eficiência operacional em ambientes SSC/GBS multinacionais. Cada dashboard que entrego é construído com governação em mente — estruturado, auditável e concebido para substituir o reporte manual, não para o complementar.",
@@ -327,22 +302,19 @@ document.addEventListener("DOMContentLoaded", () => {
             dash_skill_4:  "Design de KPIs Executivos — 70+ Líderes Seniores",
             dash_skill_5:  "Reporte Multi-Entidade — 15+ Entidades EU",
             dash_skill_6:  "Reporte SOX-Compliant & Pronto para Auditoria",
-
             mensa_eyebrow: "Sociedade de Alto QI · Top 2% · Membro desde 2014",
             mensa_title:   "Membro Mensa Brasil",
             mensa_desc:    "Admitido na Mensa Brasil em maio de 2014, após obter resultado no percentil 98 ou superior num teste de inteligência padronizado, validado pelo Conselho Federal de Psicologia. Número de membro MB 1129. A Mensa é a maior sociedade de alto QI do mundo, aberta exclusivamente a indivíduos que se situam nos 2% superiores da população.",
             mensa_badge:   "Percentil 98 · MB 1129",
-
             ci_title:    "Melhoria Contínua",
             ci_subtitle: "Pensamento Lean aplicado a operações reais — gerando mudanças mensuráveis e duradouras.",
-            ci_text:     "Como Black Belt certificado em Lean Six Sigma, liderei iniciativas de melhoria em produção, logística, finanças e serviços partilhados — entregando reduções mensuráveis no tempo de ciclo, retrabalho e custo operacional. A minha abordagem combina metodologia DMAIC estruturada com facilitação de workshops práticos: desde eventos Kaizen no chão de fábrica da Vale até redesenhos cross-funcionais na Stellantis. Aplico Value Stream Mapping, 5S, Pareto, Ishikawa, PDCA e Balanced Scorecard para diagnosticar causas raiz e sustentar melhorias além do projeto.",
-            ci_skill_1:  "Lean Six Sigma Black Belt (LSSBB)",
+            ci_text:     "Como Green Belt certificado em Lean Six Sigma, liderei iniciativas de melhoria em produção, logística, finanças e serviços partilhados — entregando reduções mensuráveis no tempo de ciclo, retrabalho e custo operacional. A minha abordagem combina metodologia DMAIC estruturada com facilitação de workshops práticos: desde eventos Kaizen no chão de fábrica da Vale até redesenhos cross-funcionais na Stellantis. Aplico Value Stream Mapping, 5S, Pareto, Ishikawa, PDCA e Balanced Scorecard para diagnosticar causas raiz e sustentar melhorias além do projeto.",
+            ci_skill_1:  "Lean Six Sigma Green Belt (LSSGB)",
             ci_skill_2:  "DMAIC & Análise de Causa Raiz",
             ci_skill_3:  "Value Stream Mapping & Redesenho de Processos",
             ci_skill_4:  "Kaizen · 5S · PDCA",
             ci_skill_5:  "Análise de Pareto & Ishikawa",
             ci_skill_6:  "Balanced Scorecard & Governação de KPIs",
-
             skills_title:    "Competências Técnicas",
             skills_subtitle: "As ferramentas que sustentam a transformação.",
             skills_lang:     "Linguagens de Programação",
@@ -352,13 +324,12 @@ document.addEventListener("DOMContentLoaded", () => {
             tier_primary:    "Expert",
             tier_secondary:  "Proficiente",
             tier_applied:    "Aplicado",
-            cert_1: "Lean Six Sigma Black Belt",
+            cert_1: "Lean Six Sigma Green Belt",
             cert_2: "Certificação RPA Automation Anywhere",
             cert_3: "Power BI Data Analytics",
             cert_4: "Processos Financeiros SAP",
             cert_5: "Finanças & Modelação Quantitativa para Analistas",
             cert_6: "Inteligência Artificial para Negócios",
-
             contact_title:    "Vamos Conectar",
             contact_subtitle: "Sempre disponível para conversas profissionais com significado — sobre transformação financeira, analytics ou partilha de conhecimento.",
             form_name_label:  "O seu nome",
@@ -367,12 +338,10 @@ document.addEventListener("DOMContentLoaded", () => {
             form_message:     "Fique à vontade para partilhar o que tiver em mente",
             form_btn:         "Enviar Mensagem",
             form_note:        "Respondo normalmente dentro de um dia útil.",
-
             footer_tagline: "Finance Transformation Lead · SAP S/4HANA · Automação · IA",
             footer_copy:    "© 2026 · Todos os direitos reservados"
         }
     };
-
     /* ── EN copy lives in the HTML markup — capture it at load so the
        dictionary can never drift from the page. The en object above is
        kept only as a fallback; the DOM values below always win. ─────── */
@@ -385,7 +354,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("[data-i18n-alt]").forEach(el => {
         translations.en[el.dataset.i18nAlt] = el.getAttribute("alt");
     });
-
     /* ── i18n engine ──────────────────────────────── */
     const applyTranslations = (lang) => {
         const dict = translations[lang] || translations.en;
@@ -410,7 +378,6 @@ document.addEventListener("DOMContentLoaded", () => {
     langButtons.forEach(btn =>
         btn.addEventListener("click", () => applyTranslations(btn.dataset.lang))
     );
-
     /* ══════════════════════════════════════════════
        ANIMATED COUNTERS
        Note: The HTML contains the final value as static text so AI
@@ -453,19 +420,15 @@ document.addEventListener("DOMContentLoaded", () => {
     } else if (numbersSection) {
         numberValues.forEach(el => animateCounter(el));
     }
-
     /* ══════════════════════════════════════════════
        MOBILE MENU — with focus trap
     ══════════════════════════════════════════════ */
     const FOCUSABLE = 'a[href], button:not([disabled]), input, textarea, select, [tabindex]:not([tabindex="-1"])';
-
     const getFocusables = (el) =>
         Array.from(el.querySelectorAll(FOCUSABLE)).filter(
             node => getComputedStyle(node).display !== "none"
         );
-
     let menuFocusTrapHandler = null;
-
     const openMenu = () => {
         if (!mobileMenu || !mobileBtn) return;
         mobileMenu.classList.add("active");
@@ -473,13 +436,11 @@ document.addEventListener("DOMContentLoaded", () => {
         mobileBtn.setAttribute("aria-label", "Close menu");
         mobileIcon?.classList.replace("fa-bars", "fa-xmark");
         document.body.classList.add("menu-open");
-
         /* Focus first item; use rAF so visibility transition has started */
         requestAnimationFrame(() => {
             const focusables = getFocusables(mobileMenu);
             if (focusables.length) focusables[0].focus();
         });
-
         /* Trap Tab / Shift+Tab inside the menu */
         menuFocusTrapHandler = (e) => {
             if (e.key !== "Tab") return;
@@ -495,7 +456,6 @@ document.addEventListener("DOMContentLoaded", () => {
         };
         document.addEventListener("keydown", menuFocusTrapHandler);
     };
-
     const closeMenu = () => {
         if (!mobileMenu || !mobileBtn) return;
         mobileMenu.classList.remove("active");
@@ -503,7 +463,6 @@ document.addEventListener("DOMContentLoaded", () => {
         mobileBtn.setAttribute("aria-label", "Open menu");
         mobileIcon?.classList.replace("fa-xmark", "fa-bars");
         document.body.classList.remove("menu-open");
-
         /* Remove trap and restore focus to the trigger button */
         if (menuFocusTrapHandler) {
             document.removeEventListener("keydown", menuFocusTrapHandler);
@@ -511,7 +470,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         mobileBtn.focus();
     };
-
     mobileBtn?.addEventListener("click", () =>
         mobileMenu?.classList.contains("active") ? closeMenu() : openMenu()
     );
@@ -522,13 +480,11 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("resize", () => {
         if (window.innerWidth > 1170) closeMenu();
     });
-
     /* ══════════════════════════════════════════════
        HEADER SCROLL
     ══════════════════════════════════════════════ */
     const syncHeader = () =>
         header?.classList.toggle("scrolled", window.scrollY > 24);
-
     /* ══════════════════════════════════════════════
        ACTIVE NAV
     ══════════════════════════════════════════════ */
@@ -549,7 +505,6 @@ document.addEventListener("DOMContentLoaded", () => {
         );
     };
     window.addEventListener("scroll", () => { syncHeader(); syncActive(); }, { passive: true });
-
     /* ══════════════════════════════════════════════
        REVEAL ON SCROLL
     ══════════════════════════════════════════════ */
@@ -570,7 +525,6 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
         revealEls.forEach(el => el.classList.add("show"));
     }
-
     /* ══════════════════════════════════════════════
        IMAGE FALLBACK
     ══════════════════════════════════════════════ */
@@ -580,7 +534,6 @@ document.addEventListener("DOMContentLoaded", () => {
             img.setAttribute("aria-hidden", "true");
         });
     });
-
     /* ══════════════════════════════════════════════
        URL LANGUAGE PARAM
     ══════════════════════════════════════════════ */
@@ -594,7 +547,6 @@ document.addEventListener("DOMContentLoaded", () => {
         initLang = urlLang || browserLang;
     }
     applyTranslations(initLang in translations ? initLang : "en");
-
     /* ══════════════════════════════════════════════
        MENSA CERTIFICATE LIGHTBOX
     ══════════════════════════════════════════════ */
@@ -605,20 +557,16 @@ document.addEventListener("DOMContentLoaded", () => {
         lightbox.setAttribute("role", "dialog");
         lightbox.setAttribute("aria-modal", "true");
         lightbox.setAttribute("aria-label", mensaCertImg.alt || "Certificate enlarged");
-
         const lbImg = document.createElement("img");
         lbImg.className = "lightbox-img";
         lbImg.src = mensaCertImg.src;
         lbImg.alt = mensaCertImg.alt;
-
         const closeBtn = document.createElement("button");
         closeBtn.className = "lightbox-close";
         closeBtn.setAttribute("aria-label", "Close image");
         closeBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
-
         lightbox.append(lbImg, closeBtn);
         document.body.appendChild(lightbox);
-
         const openLightbox = () => {
             lightbox.classList.add("active");
             document.body.style.overflow = "hidden";
@@ -629,7 +577,6 @@ document.addEventListener("DOMContentLoaded", () => {
             document.body.style.overflow = "";
             mensaCertImg.focus();
         };
-
         mensaCertImg.addEventListener("click", openLightbox);
         mensaCertImg.setAttribute("tabindex", "0");
         mensaCertImg.setAttribute("role", "button");
@@ -637,18 +584,15 @@ document.addEventListener("DOMContentLoaded", () => {
         mensaCertImg.addEventListener("keydown", e => {
             if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openLightbox(); }
         });
-
         closeBtn.addEventListener("click", closeLightbox);
         lightbox.addEventListener("click", e => { if (e.target === lightbox) closeLightbox(); });
         document.addEventListener("keydown", e => {
             if (e.key === "Escape" && lightbox.classList.contains("active")) closeLightbox();
         });
     }
-
     /* ══════════════════════════════════════════════
        INIT
     ══════════════════════════════════════════════ */
     syncHeader();
     syncActive();
-
 });
