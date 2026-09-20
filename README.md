@@ -66,7 +66,7 @@ At **Stellantis's European SSC/GBS Centre of Excellence**, I lead digital financ
 | 🏢 European Entities Transformed | **15+** | Finance operations · SAP S/4HANA |
 | 📅 Month-End Close Accelerated | **8 → 6 Days** | Automation & process redesign |
 | 📉 Manual Workload Reduction | **35–50%** | Across R2R, P2P, OTC functions |
-| 🚀 Transformation Initiatives Delivered | **25+** | End-to-end · Cross-functional |
+| 🚀 Automation Solutions Delivered | **20+** | RPA · VBA · Power Platform |
 
 </div>
 
