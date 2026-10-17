@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex">
     <title>Page not found | Marlon B Siqueira</title>
-    <link rel="icon" href="/marlonbsiqueira/images/favicon.png" type="image/png">
+    <link rel="icon" id="favicon" href="/marlonbsiqueira/images/favicon.png" type="image/png">
     <style>
-        :root { --bg: #f6f9f9; --text: #0b1f26; --muted: #4a5f66; --accent: #0e5c6b; }
+        :root { --bg: #f6f9f9; --text: #0b1f26; --muted: #4a5f66; --accent: #0e5c6b; --on-accent: #fff; }
         @media (prefers-color-scheme: dark) {
-            :root { --bg: #06141a; --text: #eef3f3; --muted: #9db0b5; --accent: #5fb3c2; }
+            :root { --bg: #06141a; --text: #eef3f3; --muted: #9db0b5; --accent: #5fb3c2; --on-accent: #06141a; }
         }
         * { box-sizing: border-box; margin: 0; }
         body {
@@ -22,7 +22,7 @@
         p { margin-top: 10px; color: var(--muted); }
         a {
             display: inline-block; margin-top: 28px; padding: 12px 28px; border-radius: 999px;
-            background: var(--accent); color: #fff; text-decoration: none;
+            background: var(--accent); color: var(--on-accent); text-decoration: none;
         }
     </style>
 </head>
@@ -31,7 +31,16 @@
         <p class="code">404</p>
         <h1>Page not found · Página não encontrada</h1>
         <p>The page you are looking for does not exist or has moved.</p>
-        <a href="/marlonbsiqueira/">Back to homepage · Voltar ao início</a>
+        <a id="home" href="/marlonbsiqueira/">Back to homepage · Voltar ao início</a>
     </main>
+    <script>
+        // GitHub Pages serves the site under /marlonbsiqueira/; other hosts
+        // (e.g. Cloudflare Pages) serve it at the domain root.
+        (function () {
+            var base = location.pathname.indexOf('/marlonbsiqueira/') === 0 ? '/marlonbsiqueira/' : '/';
+            document.getElementById('home').href = base;
+            document.getElementById('favicon').href = base + 'images/favicon.png';
+        })();
+    </script>
 </body>
 </html>
