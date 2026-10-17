@@ -810,11 +810,13 @@
                 <h2 class="section-title" data-i18n="contact_title">Let's Connect</h2>
                 <p class="section-subtitle" data-i18n="contact_subtitle">Always open to meaningful professional conversations — whether it's about finance transformation, analytics, or knowledge sharing.</p>
             </div>
-            <form id="contact-form" action="https://formsubmit.co/email-removed" method="POST" class="reveal" aria-label="Contact form">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_subject" value="New message from your portfolio site">
-                <input type="hidden" name="_next" value="https://marlonbsiqueira.github.io/marlonbsiqueira/#contact">
-                <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="reveal" aria-label="Contact form">
+                <!-- Web3Forms public access key (safe to expose; it only allows sending to the owner's inbox) -->
+                <input type="hidden" name="access_key" value="b0d1bc51-6203-4b43-89d3-f11c79c4bbb7">
+                <input type="hidden" name="subject" value="New message from your portfolio site">
+                <input type="hidden" name="from_name" value="Portfolio — marlonbsiqueira.github.io">
+                <input type="hidden" name="redirect" value="https://marlonbsiqueira.github.io/marlonbsiqueira/#contact">
+                <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
                 <div class="form-row">
                     <div class="form-field">
                         <label for="name" data-i18n="form_name_label">Your Name</label>

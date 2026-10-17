@@ -554,7 +554,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
     /* ══════════════════════════════════════════════
-       CONTACT FORM — submit in place via FormSubmit's AJAX endpoint.
+       CONTACT FORM — submit in place via the Web3Forms API.
        Falls back to the normal POST when JS is unavailable.
     ══════════════════════════════════════════════ */
     const form = document.getElementById("contact-form");
@@ -568,11 +568,11 @@ document.addEventListener("DOMContentLoaded", () => {
         };
         form.addEventListener("submit", async (e) => {
             e.preventDefault();
-            if (form.elements._honey?.value) return;
+            if (form.elements.botcheck?.checked) return;
             submitBtn.disabled = true;
             showStatus("form_sending");
             try {
-                const res = await fetch(form.action.replace("formsubmit.co/", "formsubmit.co/ajax/"), {
+                const res = await fetch(form.action, {
                     method: "POST",
                     headers: { Accept: "application/json" },
                     body: new FormData(form)
