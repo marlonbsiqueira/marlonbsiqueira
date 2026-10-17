@@ -575,6 +575,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const res = await fetch(form.action, {
                     method: "POST",
                     headers: { Accept: "application/json" },
+                    signal: AbortSignal.timeout ? AbortSignal.timeout(20000) : undefined, // never hang on "sending"
                     body: new FormData(form)
                 });
                 const data = await res.json().catch(() => ({}));
