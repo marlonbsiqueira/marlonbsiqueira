@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://marlonbsiqueira.github.io/marlonbsiqueira/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marlonbsiqueira.github.io/marlonbsiqueira/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://marlonbsiqueira.github.io/marlonbsiqueira/?lang=pt"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marlonbsiqueira.github.io/marlonbsiqueira/"/>
+    <lastmod>2026-10-17</lastmod>
+  </url>
+  <url>
+    <loc>https://marlonbsiqueira.github.io/marlonbsiqueira/?lang=pt</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marlonbsiqueira.github.io/marlonbsiqueira/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://marlonbsiqueira.github.io/marlonbsiqueira/?lang=pt"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marlonbsiqueira.github.io/marlonbsiqueira/"/>
+    <lastmod>2026-10-17</lastmod>
+  </url>
+</urlset>
