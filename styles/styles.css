@@ -337,14 +337,23 @@ input:focus-visible, textarea:focus-visible {
    NUMBERS / METRICS — full-bleed dark band
 ═══════════════════════════════════════════════ */
 #numbers {
-    background: var(--ink);
-    color: var(--paper);
+    /* Always a dark band: its own colours, not --ink/--paper, which swap
+       in dark mode (that turned the band light with white labels on it). */
+    --band-bg: #0a181e;
+    --band-fg: #eef3f3;
+    background: var(--band-bg);
+    color: var(--band-fg);
     width: 100%;
     max-width: 100%;
     padding: 80px 6%;
     position: relative;
     overflow: hidden;
     border-top: 1px solid rgba(69, 179, 194, 0.32);
+}
+/* on the dark page, lift the band slightly so it still reads as a band */
+[data-theme="dark"] #numbers {
+    --band-bg: #0f242c;
+    border-bottom: 1px solid rgba(69, 179, 194, 0.18);
 }
 #numbers::before {
     content: '';
@@ -378,10 +387,10 @@ input:focus-visible, textarea:focus-visible {
     font-size: clamp(2.6rem, 4.5vw, 4rem);
     font-weight: 400;
     font-variation-settings: "opsz" 144;
-    color: var(--paper);
     line-height: 0.95;
     letter-spacing: -0.035em;
     margin-bottom: 18px;
+    color: var(--band-fg);
 }
 .number-label {
     display: block;
@@ -907,9 +916,12 @@ input:focus-visible, textarea:focus-visible {
 ═══════════════════════════════════════════════ */
 footer { position: relative; z-index: 1; }
 .footer-content {
+    /* Dark band in both themes (same reason as #numbers) */
+    --band-bg: #0a181e;
+    --band-fg: #eef3f3;
     text-align: center; padding: 64px 24px;
-    background: var(--ink);
-    color: var(--paper);
+    background: var(--band-bg);
+    color: var(--band-fg);
     border-top: 1px solid var(--border);
 }
 .footer-name {
@@ -923,14 +935,14 @@ footer { position: relative; z-index: 1; }
     margin-top: 12px;
     font-family: var(--font-mono);
     font-size: 0.74rem;
-    color: color-mix(in srgb, var(--paper) 60%, transparent);
+    color: color-mix(in srgb, var(--band-fg) 60%, transparent);
     letter-spacing: 0.14em;
     text-transform: uppercase;
 }
 .footer-copy {
     margin-top: 18px;
     font-size: 0.78rem;
-    color: color-mix(in srgb, var(--paper) 70%, transparent);
+    color: color-mix(in srgb, var(--band-fg) 70%, transparent);
     font-family: var(--font-mono);
     letter-spacing: 0.04em;
 }
@@ -940,12 +952,13 @@ footer { position: relative; z-index: 1; }
     font-family: var(--font-mono);
     font-size: 0.72rem;
     letter-spacing: 0.04em;
-    color: color-mix(in srgb, var(--paper) 60%, transparent);
+    color: color-mix(in srgb, var(--band-fg) 60%, transparent);
     text-decoration: underline;
     text-underline-offset: 3px;
     cursor: pointer;
 }
-.footer-link:hover { color: var(--paper); }
+.footer-link:hover { color: var(--band-fg); }
+[data-theme="dark"] .footer-content { --band-bg: #0f242c; }
 
 /* ═══════════════════════════════════════════════
    COOKIE CONSENT
