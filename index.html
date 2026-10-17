@@ -202,7 +202,7 @@
                 <li class="nav-item"><a href="#technicalskills"       data-i18n="nav_skills">Capabilities</a></li>
             </ul>
             <div class="nav-actions">
-                <div class="language-switcher" aria-label="Language selector">
+                <div class="language-switcher" role="group" aria-label="Language selector">
                     <button type="button" class="lang-btn active" data-lang="en">EN</button>
                     <button type="button" class="lang-btn" data-lang="pt">PT</button>
                 </div>
@@ -215,7 +215,7 @@
                 <i class="fa-solid fa-bars" aria-hidden="true"></i>
             </button>
         </nav>
-        <div id="mobile_menu" aria-label="Mobile navigation">
+        <nav id="mobile_menu" aria-label="Mobile navigation">
             <ul id="mobile_nav_list">
                 <li class="nav-item"><a href="#home"                  data-i18n="nav_home">Home</a></li>
                 <li class="nav-item"><a href="#highlights"            data-i18n="nav_highlights">Highlights</a></li>
@@ -233,7 +233,7 @@
                 </button>
             </div>
             <a href="#contact" class="btn-primary mobile-cta" data-i18n="nav_cta">Discuss a Transformation</a>
-        </div>
+        </nav>
     </header>
     <main id="main-content">
         <!-- ═══════════ HOME ═══════════ -->
@@ -243,7 +243,7 @@
                     <span class="eyebrow-dot"></span>
                     <span data-i18n="hero_eyebrow">Finance Transformation Lead · SAP S/4HANA · Automation · AI</span>
                 </div>
-                <div class="available-badge" aria-label="Availability status">
+                <div class="available-badge">
                     <span class="avail-dot"></span>
                     <span data-i18n="hero_available">Based in Porto, Portugal</span>
                 </div>
@@ -268,7 +268,7 @@
                 <p class="description" data-i18n="hero_description">
                     Finance Transformation Lead with 12+ years of international experience across Europe and Latin America — leading SAP S/4HANA transformation, intelligent automation and advanced analytics across multinational SSC/GBS environments. I translate enterprise-wide complexity into governed, scalable solutions that deliver measurable business impact.
                 </p>
-                <div class="home-tags" aria-label="Key competencies">
+                <div class="home-tags" role="group" aria-label="Key competencies">
                     <span>SAP S/4HANA</span>
                     <span>Finance Transformation</span>
                     <span>Intelligent Automation · AI</span>
@@ -284,7 +284,7 @@
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
-                <div class="social-media-buttons" aria-label="Social media links">
+                <div class="social-media-buttons" role="group" aria-label="Social media links">
                     <a href="https://www.linkedin.com/in/marlonbsiqueira/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                         <i class="fa-brands fa-linkedin"></i>
                     </a>
@@ -816,7 +816,7 @@
                 <input type="hidden" name="subject" value="New message from your portfolio site">
                 <input type="hidden" name="from_name" value="Portfolio — marlonbsiqueira.github.io">
                 <input type="hidden" name="redirect" value="https://marlonbsiqueira.github.io/marlonbsiqueira/#contact">
-                <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+                <input type="checkbox" name="botcheck" style="display:none" tabindex="-1">
                 <div class="form-row">
                     <div class="form-field">
                         <label for="name" data-i18n="form_name_label">Your Name</label>
