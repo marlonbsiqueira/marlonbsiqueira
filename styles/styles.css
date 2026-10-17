@@ -153,7 +153,7 @@ button, input, textarea { font: inherit; }
     left: 0;
     z-index: 9999;
     padding: 12px 20px;
-    background: var(--accent);
+    background: #0e5c6b;   /* deep petrol in both themes (dark --accent is too light for white text) */
     color: #fff;
     font-family: var(--font-body);
     font-size: 0.875rem;
@@ -567,8 +567,7 @@ input:focus-visible, textarea:focus-visible {
     font-size: 0.66rem;
     font-weight: 500;
     letter-spacing: 0.08em;
-    color: var(--text-4);
-    opacity: 0.85;
+    color: var(--text-3);
 }
 .company-tag {
     display: inline-block;
