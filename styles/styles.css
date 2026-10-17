@@ -40,7 +40,7 @@
     --accent-line:  rgba(14, 92, 107, 0.24);
     --primary:      var(--accent);
     --primary-dim:  var(--accent-soft);
-    --signal:       #1c7a68;   /* success / current — teal-green */
+    --signal:       #166656;   /* success / current — teal-green (AA on paper tones) */
     --signal-soft:  rgba(28, 122, 104, 0.10);
 
     /* Shadows — editorial, soft, cool-tinted */
@@ -778,7 +778,7 @@ input:focus-visible, textarea:focus-visible {
     margin-top: 22px;
     padding-top: 18px;
     border-top: 1px solid var(--border);
-    color: var(--text-4);
+    color: var(--text-3);
 }
 .skills-icons { display: flex; flex-direction: column; gap: 12px; }
 .skill-item { display: flex; align-items: center; gap: 12px; }
@@ -930,7 +930,7 @@ footer { position: relative; z-index: 1; }
 .footer-copy {
     margin-top: 18px;
     font-size: 0.78rem;
-    color: color-mix(in srgb, var(--paper) 50%, transparent);
+    color: color-mix(in srgb, var(--paper) 70%, transparent);
     font-family: var(--font-mono);
     letter-spacing: 0.04em;
 }
@@ -1227,3 +1227,10 @@ footer { position: relative; z-index: 1; }
 
 .lightbox[hidden] { display: none; }
 main section[tabindex="-1"]:focus { outline: none; }
+
+/* Off-canvas reveal animations must never let the page pan sideways
+   (iOS Safari ignores overflow-x on <body> alone). `clip`, unlike
+   `hidden`, creates no scroll container, so position: sticky still works. */
+@supports (overflow: clip) {
+    html, body { overflow-x: clip; }
+}
