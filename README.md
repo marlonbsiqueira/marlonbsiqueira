@@ -12,7 +12,6 @@
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Marlon%20B%20Siqueira-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/marlonbsiqueira)
 [![Portfolio](https://img.shields.io/badge/Portfolio-Visit-1B3BFF?style=for-the-badge&logo=githubpages&logoColor=white)](https://marlonbsiqueira.github.io/marlonbsiqueira/)
 [![MBS Advisory](https://img.shields.io/badge/MBS%20Advisory-Consulting-00C2A8?style=for-the-badge&logo=handshake&logoColor=white)](https://marlonbsiqueira.github.io/MBS/)
-[![YouTube](https://img.shields.io/badge/YouTube-Channel-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@marlonbsiqueira468)
 
 ![Porto](https://img.shields.io/badge/📍_Porto-Portugal-0A1628?style=flat-square)
 ![EU Citizen](https://img.shields.io/badge/🇧🇷_🇮🇹_EU_Citizen-Brazilian_·_Italian-003399?style=flat-square)
